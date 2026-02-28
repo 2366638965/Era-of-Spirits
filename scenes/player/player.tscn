@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b5hi5l6lb53sa"]
+
+[ext_resource type="SpriteFrames" uid="uid://bbks2hsoj1yhn" path="res://assets/animations/player/player.tres" id="1_8afob"]
+[ext_resource type="Script" uid="uid://cs5fnn55uc57b" path="res://scripts/player/player.gd" id="2_q0a2k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8afob"]
+size = Vector2(32, 38)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dovo2"]
+radius = 12.0415945
+
+[node name="Player" type="CharacterBody2D" unique_id=1007376433]
+script = ExtResource("2_q0a2k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1698314870]
+position = Vector2(0, 11)
+scale = Vector2(1, 1.0800006)
+shape = SubResource("RectangleShape2D_8afob")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1801544869]
+texture_filter = 1
+scale = Vector2(0.4, 0.4)
+sprite_frames = ExtResource("1_8afob")
+animation = &"idle_down"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=551897001]
+zoom = Vector2(2, 2)
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1225751746]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=953095905]
+position = Vector2(0, 28)
+scale = Vector2(1, 0.72)
+shape = SubResource("CircleShape2D_dovo2")
+
+[node name="InteractionRay" type="RayCast2D" parent="." unique_id=276152268]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ch3cpovhhunxk"]
+
+[ext_resource type="SpriteFrames" uid="uid://qpn6eco7fh30" path="res://assets/animations/beast/clouddog.tres" id="1_3k76t"]
+[ext_resource type="Script" path="res://scripts/beast/explore_beast.gd" id="2_beast_ai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3k76t"]
+size = Vector2(24.779877, 20.916527)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjbe8"]
+size = Vector2(22, 19)
+
+[node name="Explorebeast" type="Node2D" unique_id=584197639]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=405696406]
+script = ExtResource("2_beast_ai")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1152727048]
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("1_3k76t")
+animation = &"run_up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=670958053]
+position = Vector2(2.3841858e-07, -0.5000002)
+scale = Vector2(0.80710655, 0.8127546)
+shape = SubResource("RectangleShape2D_3k76t")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=1206631772]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=1435574850]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_hjbe8")

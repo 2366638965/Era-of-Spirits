@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bq61ijaqmpsdv"]
+
+[ext_resource type="Texture2D" uid="uid://nv2kkj13jhm1" path="res://assets/background/caodi.jpeg" id="1_1lokq"]
+[ext_resource type="Script" uid="uid://bvalyf6oui4ps" path="res://scripts/battle/grassland01.gd" id="2_grassland_script"]
+
+[node name="Grassland01" type="Node2D" unique_id=1393914878]
+script = ExtResource("2_grassland_script")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=838344205]
+position = Vector2(590, 266)
+texture = ExtResource("1_1lokq")
