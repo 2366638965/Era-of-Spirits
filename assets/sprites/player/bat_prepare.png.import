@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbs8oo3jt6ty7"
-path="res://.godot/imported/loufan1.png-1a71f60352f25d37980fdef54ca313e8.ctex"
+uid="uid://bki1uv8qrg80q"
+path="res://.godot/imported/bat_prepare.png-fc3c890fc30b57b06f922ba1e3dc3bea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/city/loufan1.png"
-dest_files=["res://.godot/imported/loufan1.png-1a71f60352f25d37980fdef54ca313e8.ctex"]
+source_file="res://assets/sprites/player/bat_prepare.png"
+dest_files=["res://.godot/imported/bat_prepare.png-fc3c890fc30b57b06f922ba1e3dc3bea.ctex"]
 
 [params]
 

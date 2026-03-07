@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dy412j228t1bw"]
+
+[ext_resource type="SpriteFrames" uid="uid://cq0xb0aopfnf6" path="res://assets/animations/player/battleplayer.tres" id="1_nvj88"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvj88"]
+size = Vector2(88, 209)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4oxn"]
+size = Vector2(67, 209)
+
+[node name="battlep" type="CharacterBody2D" unique_id=941227138]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=251616457]
+position = Vector2(1, 2.5)
+shape = SubResource("RectangleShape2D_nvj88")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=587907285]
+texture_filter = 1
+sprite_frames = ExtResource("1_nvj88")
+animation = &"new_animation"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=813583170]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1175349795]
+position = Vector2(-1.5, 1.5)
+shape = SubResource("RectangleShape2D_i4oxn")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1871045286]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3eh1nih2td5e"
-path="res://.godot/imported/dimianqiao.png-1027993fe43e55b533c09e9dd0d95add.ctex"
+uid="uid://dp00buvnvpwhj"
+path="res://.godot/imported/bat_jump.png-443d686cc9fc9aee017f0fa407863ab4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/city/dimianqiao.png"
-dest_files=["res://.godot/imported/dimianqiao.png-1027993fe43e55b533c09e9dd0d95add.ctex"]
+source_file="res://assets/sprites/player/bat_jump.png"
+dest_files=["res://.godot/imported/bat_jump.png-443d686cc9fc9aee017f0fa407863ab4.ctex"]
 
 [params]
 

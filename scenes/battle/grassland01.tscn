@@ -2,10 +2,34 @@
 
 [ext_resource type="Texture2D" uid="uid://nv2kkj13jhm1" path="res://assets/background/caodi.jpeg" id="1_1lokq"]
 [ext_resource type="Script" uid="uid://bvalyf6oui4ps" path="res://scripts/battle/grassland01.gd" id="2_grassland_script"]
+[ext_resource type="PackedScene" uid="uid://dy412j228t1bw" path="res://scenes/player/battleplayer.tscn" id="2_n3obf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3obf"]
+size = Vector2(20, 768)
 
 [node name="Grassland01" type="Node2D" unique_id=1393914878]
 script = ExtResource("2_grassland_script")
 
+[node name="battlep" parent="." unique_id=941227138 instance=ExtResource("2_n3obf")]
+z_index = 1
+position = Vector2(590, 266)
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=838344205]
 position = Vector2(590, 266)
 texture = ExtResource("1_1lokq")
+
+[node name="Area2D4" type="Area2D" parent="." unique_id=846324118]
+position = Vector2(1304, 265)
+
+[node name="right_wall" type="CollisionShape2D" parent="Area2D4" unique_id=137614405]
+position = Vector2(-1428, 0)
+shape = SubResource("RectangleShape2D_n3obf")
+
+[node name="left_wall" type="CollisionShape2D" parent="Area2D4" unique_id=1349264494]
+shape = SubResource("RectangleShape2D_n3obf")
+
+[node name="top_wall" type="CollisionShape2D" parent="Area2D4" unique_id=7280404]
+position = Vector2(-716, -391)
+rotation = 1.5707964
+scale = Vector2(1, 1.8400006)
+shape = SubResource("RectangleShape2D_n3obf")

@@ -14,6 +14,7 @@ var animation_module
 
 
 func _ready() -> void:
+	add_to_group("player")
 	input_module = PlayerInputModule.new()
 	movement_module = PlayerMovementModule.new()
 	animation_module = PlayerAnimationModule.new(animated_sprite)

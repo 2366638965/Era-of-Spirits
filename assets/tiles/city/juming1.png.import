@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://day47npiry4tw"
-path="res://.godot/imported/fangziqianmian.png-aeec95a9977302700402b3a4371b247e.ctex"
+uid="uid://c3caki45vaxo5"
+path="res://.godot/imported/juming1.png-4a5997c5ce4b0a034629e65c4375c4f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/city/fangziqianmian.png"
-dest_files=["res://.godot/imported/fangziqianmian.png-aeec95a9977302700402b3a4371b247e.ctex"]
+source_file="res://assets/tiles/city/juming1.png"
+dest_files=["res://.godot/imported/juming1.png-4a5997c5ce4b0a034629e65c4375c4f2.ctex"]
 
 [params]
 

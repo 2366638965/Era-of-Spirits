@@ -14,9 +14,9 @@ config/name="eraofspirits"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[editor_plugins]
+[autoload]
 
-enabled=PackedStringArray("res://addons/godot_mcp/plugin.cfg")
+SceneFlow="*res://autoload/SceneFlow.gd"
 
 [input]
 

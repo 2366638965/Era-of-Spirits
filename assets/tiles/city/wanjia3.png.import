@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4kr3xm3vnbpr"
-path="res://.godot/imported/qiaoheganko.png-e14ba991b63ff27df6f73e66b39a02ee.ctex"
+uid="uid://ro2hgwktiu0q"
+path="res://.godot/imported/wanjia3.png-d99ea7f2035fad2a477adf7242c86259.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/city/qiaoheganko.png"
-dest_files=["res://.godot/imported/qiaoheganko.png-e14ba991b63ff27df6f73e66b39a02ee.ctex"]
+source_file="res://assets/tiles/city/wanjia3.png"
+dest_files=["res://.godot/imported/wanjia3.png-d99ea7f2035fad2a477adf7242c86259.ctex"]
 
 [params]
 
