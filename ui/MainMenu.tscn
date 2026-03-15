@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://dhgf62n4hh7gd"]
+
+[ext_resource type="VideoStream" uid="uid://buji8yvepvrq2" path="res://assets/background/menu.ogv" id="1_b00nv"]
+
+[sub_resource type="AudioStream" id="AudioStream_b00nv"]
+
+[node name="MainMenu" type="Control" unique_id=1065234718]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SafeArea" type="MarginContainer" parent="." unique_id=43827716]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 650.0
+
+[node name="RootLayer" type="Control" parent="SafeArea" unique_id=611643840]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="VideoLayer" type="Control" parent="SafeArea/RootLayer" unique_id=498315469]
+anchors_preset = 0
+offset_right = 805.0
+offset_bottom = 649.0
+mouse_filter = 2
+
+[node name="BackgroundVideo" type="VideoStreamPlayer" parent="SafeArea/RootLayer/VideoLayer" unique_id=439702261]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 646.0
+mouse_filter = 2
+stream = ExtResource("1_b00nv")
+volume_db = -11.999999
+autoplay = true
+expand = true
+loop = true
+
+[node name="OverlayLayer" type="Control" parent="SafeArea/RootLayer" unique_id=1496508241]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="TopGradient" type="TextureRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=1208515567]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BottomGradient" type="TextureRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=1517969561]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterSoftGlow" type="TextureRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=2141710955]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Vignette" type="TextureRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=152213506]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleLayer" type="Control" parent="SafeArea/RootLayer" unique_id=1016163593]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleGroup" type="CenterContainer" parent="SafeArea/RootLayer/TitleLayer" unique_id=140200291]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleGlow" type="TextureRect" parent="SafeArea/RootLayer/TitleLayer/TitleGroup" unique_id=424962506]
+layout_mode = 2
+
+[node name="TitleLogo" type="TextureRect" parent="SafeArea/RootLayer/TitleLayer/TitleGroup" unique_id=642192997]
+layout_mode = 2
+
+[node name="SubtitleLabel" type="Label" parent="SafeArea/RootLayer/TitleLayer" unique_id=89800919]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="MenuLayer" type="Control" parent="SafeArea/RootLayer" unique_id=2079635188]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MenuAnchor" type="MarginContainer" parent="SafeArea/RootLayer/MenuLayer" unique_id=1261188857]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonPanel" type="VBoxContainer" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor" unique_id=630827086]
+layout_mode = 2
+
+[node name="NewGameBtn" type="TextureButton" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=646556345]
+layout_mode = 2
+
+[node name="LoadGameBtn" type="TextureButton" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=1689877360]
+layout_mode = 2
+
+[node name="SettingsBtn" type="TextureButton" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=527103958]
+layout_mode = 2
+
+[node name="ExitBtn" type="TextureButton" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=2069769472]
+layout_mode = 2
+
+[node name="VersionLabel" type="Label" parent="SafeArea/RootLayer/MenuLayer" unique_id=2582368]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="FXLayer" type="Control" parent="SafeArea/RootLayer" unique_id=1530004891]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FrontFog" type="TextureRect" parent="SafeArea/RootLayer/FXLayer" unique_id=705011486]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LightDust" type="GPUParticles2D" parent="SafeArea/RootLayer/FXLayer" unique_id=1088924992]
+
+[node name="PopupLayer" type="CanvasLayer" parent="SafeArea/RootLayer" unique_id=789160193]
+
+[node name="LoadMenuHolder" type="Control" parent="SafeArea/RootLayer/PopupLayer" unique_id=1113323025]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SettingsMenuHolder" type="Control" parent="SafeArea/RootLayer/PopupLayer" unique_id=1779876138]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FadeLayer" type="ColorRect" parent="SafeArea/RootLayer" unique_id=626790717]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1637719967]
+
+[node name="MenuBgm" type="AudioStreamPlayer" parent="." unique_id=1876070106]
+stream = SubResource("AudioStream_b00nv")
+
+[node name="UiSfxHover" type="AudioStreamPlayer" parent="." unique_id=576510610]
+
+[node name="UiSfxClick" type="AudioStreamPlayer" parent="." unique_id=701354078]

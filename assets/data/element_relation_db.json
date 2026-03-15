@@ -1,0 +1,114 @@
+{
+  "element_relations": {
+	"wood": {
+	  "wood": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  },
+	  "earth": {
+		"multiplier": 1.25,
+		"tag": "克制"
+	  },
+	  "fire": {
+		"multiplier": 0.85,
+		"tag": "被克"
+	  },
+	  "wind": {
+		"multiplier": 0.9,
+		"tag": "被克"
+	  },
+	  "spirit": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  }
+	},
+	"earth": {
+	  "wood": {
+		"multiplier": 0.85,
+		"tag": "被克"
+	  },
+	  "earth": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  },
+	  "fire": {
+		"multiplier": 1.25,
+		"tag": "克制"
+	  },
+	  "wind": {
+		"multiplier": 1.15,
+		"tag": "克制"
+	  },
+	  "spirit": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  }
+	},
+	"fire": {
+	  "wood": {
+		"multiplier": 1.25,
+		"tag": "克制"
+	  },
+	  "earth": {
+		"multiplier": 0.85,
+		"tag": "被克"
+	  },
+	  "fire": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  },
+	  "wind": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  },
+	  "spirit": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  }
+	},
+	"wind": {
+	  "wood": {
+		"multiplier": 1.25,
+		"tag": "克制"
+	  },
+	  "earth": {
+		"multiplier": 0.85,
+		"tag": "被克"
+	  },
+	  "fire": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  },
+	  "wind": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  },
+	  "spirit": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  }
+	},
+	"spirit": {
+	  "wood": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  },
+	  "earth": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  },
+	  "fire": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  },
+	  "wind": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  },
+	  "spirit": {
+		"multiplier": 1.0,
+		"tag": "普通"
+	  }
+	}
+  }
+}

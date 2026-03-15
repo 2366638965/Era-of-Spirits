@@ -1,0 +1,269 @@
+{
+  "player_skills": [
+	{
+	  "id": "sk_beng",
+	  "name_zh": "崩拳",
+	  "name_en": "Burst Fist",
+	  "category": "martial_skill",
+	  "system_type": "body",
+	  "rarity": "common",
+	  "learnable": true,
+	  "learned_by_default": true,
+	  "element": "",
+	  "cost": {
+		"resource": "stamina",
+		"value": 12
+	  },
+	  "cooldown": 2.0,
+	  "cast_time": 0.1,
+	  "target_type": "enemy",
+	  "range_type": "melee",
+	  "power": 22,
+	  "desc": "以爆发劲力轰击前方目标的基础拳技。",
+	  "bonus": {
+		"type": "none",
+		"params": {}
+	  },
+	  "effect": {
+		"type": "melee_hit",
+		"params": {
+		  "hit_count": 1,
+		  "knockback": 0.8
+		}
+	  }
+	},
+	{
+	  "id": "sk_sweep",
+	  "name_zh": "扫堂腿",
+	  "name_en": "Sweep Kick",
+	  "category": "martial_skill",
+	  "system_type": "body",
+	  "rarity": "common",
+	  "learnable": true,
+	  "learned_by_default": true,
+	  "element": "",
+	  "cost": {
+		"resource": "stamina",
+		"value": 15
+	  },
+	  "cooldown": 4.0,
+	  "cast_time": 0.12,
+	  "target_type": "enemy",
+	  "range_type": "aoe",
+	  "power": 18,
+	  "desc": "基础腿法，用于打断和牵制近身敌人。",
+	  "bonus": {
+		"type": "none",
+		"params": {}
+	  },
+	  "effect": {
+		"type": "aoe_apply_state",
+		"params": {
+		  "radius": 1.8,
+		  "state": "slow",
+		  "chance": 0.6,
+		  "duration": 1.5
+		}
+	  }
+	},
+	{
+	  "id": "sk_step",
+	  "name_zh": "游身步",
+	  "name_en": "Flow Step",
+	  "category": "movement_skill",
+	  "system_type": "body",
+	  "rarity": "common",
+	  "learnable": true,
+	  "learned_by_default": true,
+	  "element": "",
+	  "cost": {
+		"resource": "stamina",
+		"value": 10
+	  },
+	  "cooldown": 3.5,
+	  "cast_time": 0.05,
+	  "target_type": "self",
+	  "range_type": "movement",
+	  "power": 0,
+	  "desc": "基础身法，可快速调整站位和闪避攻击。",
+	  "bonus": {
+		"type": "passive_stat_bonus",
+		"params": {
+		  "spd": 1,
+		  "agi": 2
+		}
+	  },
+	  "effect": {
+		"type": "dash_move",
+		"params": {
+		  "distance": 2.8
+		}
+	  }
+	},
+	{
+	  "id": "sk_fireball",
+	  "name_zh": "火球术",
+	  "name_en": "Fireball",
+	  "category": "spell",
+	  "system_type": "spiritual",
+	  "rarity": "common",
+	  "learnable": true,
+	  "learned_by_default": true,
+	  "element": "fire",
+	  "cost": {
+		"resource": "mp",
+		"value": 12
+	  },
+	  "cooldown": 2.5,
+	  "cast_time": 0.2,
+	  "target_type": "enemy",
+	  "range_type": "projectile",
+	  "power": 24,
+	  "desc": "凝聚火灵气形成火球攻击敌人。",
+	  "bonus": {
+		"type": "none",
+		"params": {}
+	  },
+	  "effect": {
+		"type": "single_projectile_apply_state",
+		"params": {
+		  "projectile_speed": 11.0,
+		  "hit_count": 1,
+		  "state": "burn",
+		  "chance": 0.2,
+		  "duration": 3.0
+		}
+	  }
+	},
+	{
+	  "id": "sk_water",
+	  "name_zh": "水弹术",
+	  "name_en": "Water Bullet",
+	  "category": "spell",
+	  "system_type": "spiritual",
+	  "rarity": "common",
+	  "learnable": true,
+	  "learned_by_default": true,
+	  "element": "water",
+	  "cost": {
+		"resource": "mp",
+		"value": 11
+	  },
+	  "cooldown": 2.3,
+	  "cast_time": 0.18,
+	  "target_type": "enemy",
+	  "range_type": "projectile",
+	  "power": 22,
+	  "desc": "压缩水灵气形成高速水弹攻击目标。",
+	  "bonus": {
+		"type": "none",
+		"params": {}
+	  },
+	  "effect": {
+		"type": "single_projectile",
+		"params": {
+		  "projectile_speed": 13.0,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "sk_earth",
+	  "name_zh": "土刺",
+	  "name_en": "Earth Spike",
+	  "category": "spell",
+	  "system_type": "spiritual",
+	  "rarity": "common",
+	  "learnable": true,
+	  "learned_by_default": true,
+	  "element": "earth",
+	  "cost": {
+		"resource": "mp",
+		"value": 14
+	  },
+	  "cooldown": 4.0,
+	  "cast_time": 0.28,
+	  "target_type": "enemy",
+	  "range_type": "ground",
+	  "power": 26,
+	  "desc": "从地面突起土刺攻击前方目标。",
+	  "bonus": {
+		"type": "none",
+		"params": {}
+	  },
+	  "effect": {
+		"type": "ground_spike",
+		"params": {
+		  "hit_count": 1,
+		  "knockup_chance": 0.25
+		}
+	  }
+	},
+	{
+	  "id": "sk_wood_bind",
+	  "name_zh": "木藤束缚",
+	  "name_en": "Vine Bind",
+	  "category": "spell",
+	  "system_type": "spiritual",
+	  "rarity": "common",
+	  "learnable": true,
+	  "learned_by_default": true,
+	  "element": "wood",
+	  "cost": {
+		"resource": "mp",
+		"value": 15
+	  },
+	  "cooldown": 5.5,
+	  "cast_time": 0.3,
+	  "target_type": "enemy",
+	  "range_type": "projectile",
+	  "power": 12,
+	  "desc": "召出木藤束缚目标，限制其行动。",
+	  "bonus": {
+		"type": "none",
+		"params": {}
+	  },
+	  "effect": {
+		"type": "projectile_apply_state",
+		"params": {
+		  "projectile_speed": 9.0,
+		  "state": "bind",
+		  "chance": 1.0,
+		  "duration": 1.8
+		}
+	  }
+	},
+	{
+	  "id": "sk_metal",
+	  "name_zh": "锋芒术",
+	  "name_en": "Metal Edge",
+	  "category": "spell",
+	  "system_type": "spiritual",
+	  "rarity": "common",
+	  "learnable": true,
+	  "learned_by_default": true,
+	  "element": "metal",
+	  "cost": {
+		"resource": "mp",
+		"value": 13
+	  },
+	  "cooldown": 2.8,
+	  "cast_time": 0.16,
+	  "target_type": "enemy",
+	  "range_type": "projectile",
+	  "power": 25,
+	  "desc": "凝聚金行锋芒形成锐利气刃切割敌人。",
+	  "bonus": {
+		"type": "none",
+		"params": {}
+	  },
+	  "effect": {
+		"type": "piercing_projectile",
+		"params": {
+		  "projectile_speed": 14.0,
+		  "max_targets": 2
+		}
+	  }
+	}
+  ]
+}

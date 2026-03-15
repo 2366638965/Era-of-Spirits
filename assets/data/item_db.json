@@ -1,0 +1,205 @@
+{
+  "items": [
+	{
+	  "id": "bag_l",
+	  "name_zh": "低阶御兽袋",
+	  "name_en": "Low Beast Bag",
+	  "category": "capture",
+	  "stackable": true,
+	  "max_stack": 99,
+	  "rarity": "common",
+	  "sell_price": 20,
+	  "buy_price": 60,
+	  "usable_in_battle": true,
+	  "usable_in_field": true,
+	  "desc": "用于收服普通灵兽的基础御兽袋。",
+	  "effect": {
+		"type": "capture",
+		"params": {
+		  "capture_rate_bonus": 0.0
+		}
+	  }
+	},
+	{
+	  "id": "bag_m",
+	  "name_zh": "中阶御兽袋",
+	  "name_en": "Mid Beast Bag",
+	  "category": "capture",
+	  "stackable": true,
+	  "max_stack": 99,
+	  "rarity": "rare",
+	  "sell_price": 70,
+	  "buy_price": 180,
+	  "usable_in_battle": true,
+	  "usable_in_field": true,
+	  "desc": "提升对稀有灵兽的收服成功率。",
+	  "effect": {
+		"type": "capture",
+		"params": {
+		  "capture_rate_bonus": 0.12
+		}
+	  }
+	},
+	{
+	  "id": "bag_h",
+	  "name_zh": "高阶御兽袋",
+	  "name_en": "High Beast Bag",
+	  "category": "capture",
+	  "stackable": true,
+	  "max_stack": 99,
+	  "rarity": "epic",
+	  "sell_price": 140,
+	  "buy_price": 360,
+	  "usable_in_battle": true,
+	  "usable_in_field": true,
+	  "desc": "用于高品质灵兽收服的高级御兽袋。",
+	  "effect": {
+		"type": "capture",
+		"params": {
+		  "capture_rate_bonus": 0.25
+		}
+	  }
+	},
+	{
+	  "id": "hp_s",
+	  "name_zh": "小型灵元药剂",
+	  "name_en": "Small HP Potion",
+	  "category": "consumable",
+	  "stackable": true,
+	  "max_stack": 99,
+	  "rarity": "common",
+	  "sell_price": 15,
+	  "buy_price": 50,
+	  "usable_in_battle": true,
+	  "usable_in_field": true,
+	  "desc": "恢复少量生命值。",
+	  "effect": {
+		"type": "recover_hp",
+		"params": {
+		  "flat_value": 50
+		}
+	  }
+	},
+	{
+	  "id": "mp_s",
+	  "name_zh": "小型灵息药剂",
+	  "name_en": "Small MP Potion",
+	  "category": "consumable",
+	  "stackable": true,
+	  "max_stack": 99,
+	  "rarity": "common",
+	  "sell_price": 18,
+	  "buy_price": 55,
+	  "usable_in_battle": true,
+	  "usable_in_field": true,
+	  "desc": "恢复少量MP。",
+	  "effect": {
+		"type": "recover_mp",
+		"params": {
+		  "flat_value": 30
+		}
+	  }
+	},
+	{
+	  "id": "clr_1",
+	  "name_zh": "清心符",
+	  "name_en": "Cleanse Talisman",
+	  "category": "consumable",
+	  "stackable": true,
+	  "max_stack": 99,
+	  "rarity": "uncommon",
+	  "sell_price": 25,
+	  "buy_price": 80,
+	  "usable_in_battle": true,
+	  "usable_in_field": true,
+	  "desc": "解除一个负面状态。",
+	  "effect": {
+		"type": "cleanse_state",
+		"params": {
+		  "remove_count": 1,
+		  "target_category": "debuff"
+		}
+	  }
+	},
+	{
+	  "id": "evo_fire",
+	  "name_zh": "赤焰灵核",
+	  "name_en": "Red Flame Core",
+	  "category": "evolution_material",
+	  "stackable": true,
+	  "max_stack": 99,
+	  "rarity": "epic",
+	  "sell_price": 180,
+	  "buy_price": 0,
+	  "usable_in_battle": false,
+	  "usable_in_field": true,
+	  "desc": "蕴含炽烈火灵的进化材料。",
+	  "effect": {
+		"type": "evolution_item",
+		"params": {
+		  "target_group": "lamp_spirit"
+		}
+	  }
+	},
+	{
+	  "id": "mat_wood",
+	  "name_zh": "木灵生长精华",
+	  "name_en": "Wood Essence",
+	  "category": "material",
+	  "stackable": true,
+	  "max_stack": 99,
+	  "rarity": "rare",
+	  "sell_price": 90,
+	  "buy_price": 0,
+	  "usable_in_battle": false,
+	  "usable_in_field": false,
+	  "desc": "富含木属性灵息的材料。",
+	  "effect": {
+		"type": "material",
+		"params": {
+		  "element": "wood"
+		}
+	  }
+	},
+	{
+	  "id": "mat_earth",
+	  "name_zh": "岩甲碎片",
+	  "name_en": "Earth Shell",
+	  "category": "material",
+	  "stackable": true,
+	  "max_stack": 99,
+	  "rarity": "uncommon",
+	  "sell_price": 40,
+	  "buy_price": 0,
+	  "usable_in_battle": false,
+	  "usable_in_field": false,
+	  "desc": "带有厚重土灵波动的碎片。",
+	  "effect": {
+		"type": "material",
+		"params": {
+		  "element": "earth"
+		}
+	  }
+	},
+	{
+	  "id": "book_wind",
+	  "name_zh": "风行步残卷",
+	  "name_en": "Wind Step Manual",
+	  "category": "skill_manual",
+	  "stackable": true,
+	  "max_stack": 99,
+	  "rarity": "rare",
+	  "sell_price": 120,
+	  "buy_price": 0,
+	  "usable_in_battle": false,
+	  "usable_in_field": true,
+	  "desc": "记录了风系身法技巧的残卷。",
+	  "effect": {
+		"type": "unlock_skill",
+		"params": {
+		  "skill_id": "skill_010"
+		}
+	  }
+	}
+  ]
+}

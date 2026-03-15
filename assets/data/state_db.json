@@ -1,0 +1,145 @@
+{
+  "states": [
+	{
+	  "id": "burn",
+	  "name_zh": "灼烧",
+	  "name_en": "Burn",
+	  "category": "debuff",
+	  "stackable": false,
+	  "max_stack": 1,
+	  "default_duration": 3.0,
+	  "tags": ["dot", "fire", "damage_over_time"],
+	  "desc": "持续受到火属性伤害。",
+	  "effect": {
+		"type": "periodic_damage",
+		"params": {
+		  "tick_interval": 1.0,
+		  "damage_ratio": 0.03,
+		  "damage_element": "fire"
+		}
+	  },
+	  "visual": {
+		"icon": "icon_state_burn",
+		"color": "#E2583E"
+	  }
+	},
+	{
+	  "id": "bind",
+	  "name_zh": "束缚",
+	  "name_en": "Bind",
+	  "category": "debuff",
+	  "stackable": false,
+	  "max_stack": 1,
+	  "default_duration": 1.5,
+	  "tags": ["control", "movement_lock"],
+	  "desc": "无法移动，但仍可进行部分攻击或施法。",
+	  "effect": {
+		"type": "restrict_movement",
+		"params": {
+		  "can_move": false,
+		  "can_attack": true,
+		  "can_cast": true
+		}
+	  },
+	  "visual": {
+		"icon": "icon_state_bind",
+		"color": "#5FAF4B"
+	  }
+	},
+	{
+	  "id": "slow",
+	  "name_zh": "减速",
+	  "name_en": "Slow",
+	  "category": "debuff",
+	  "stackable": false,
+	  "max_stack": 1,
+	  "default_duration": 2.0,
+	  "tags": ["speed_down"],
+	  "desc": "移动速度与部分动作速度下降。",
+	  "effect": {
+		"type": "stat_modifier",
+		"params": {
+		  "stats": {
+			"spd": -0.2,
+			"agi": -0.1
+		  }
+		}
+	  },
+	  "visual": {
+		"icon": "icon_state_slow",
+		"color": "#7CC7C9"
+	  }
+	},
+	{
+	  "id": "stun",
+	  "name_zh": "眩晕",
+	  "name_en": "Stun",
+	  "category": "debuff",
+	  "stackable": false,
+	  "max_stack": 1,
+	  "default_duration": 1.2,
+	  "tags": ["hard_control"],
+	  "desc": "无法移动、攻击或施法。",
+	  "effect": {
+		"type": "full_control_lock",
+		"params": {
+		  "can_move": false,
+		  "can_attack": false,
+		  "can_cast": false
+		}
+	  },
+	  "visual": {
+		"icon": "icon_state_stun",
+		"color": "#F2C94C"
+	  }
+	},
+	{
+	  "id": "knockup",
+	  "name_zh": "击飞",
+	  "name_en": "Knock Up",
+	  "category": "control",
+	  "stackable": false,
+	  "max_stack": 1,
+	  "default_duration": 0.8,
+	  "tags": ["air_control", "launcher"],
+	  "desc": "被击飞到空中，短时间失去控制。",
+	  "effect": {
+		"type": "launch_control",
+		"params": {
+		  "airborne": true,
+		  "can_move": false,
+		  "can_attack": false,
+		  "can_cast": false
+		}
+	  },
+	  "visual": {
+		"icon": "icon_state_knockup",
+		"color": "#BDBDBD"
+	  }
+	},
+	{
+	  "id": "shield_break",
+	  "name_zh": "破盾",
+	  "name_en": "Shield Break",
+	  "category": "debuff",
+	  "stackable": false,
+	  "max_stack": 1,
+	  "default_duration": 4.0,
+	  "tags": ["defense_down"],
+	  "desc": "护盾效率下降，防御能力减弱。",
+	  "effect": {
+		"type": "stat_modifier",
+		"params": {
+		  "stats": {
+			"def": -0.15,
+			"res": -0.15
+		  }
+		}
+	  },
+	  "visual": {
+		"icon": "icon_state_shield_break",
+		"color": "#A97B50"
+	  }
+	}
+  ]
+}

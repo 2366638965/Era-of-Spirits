@@ -1,0 +1,133 @@
+{
+  "player_state": {
+	"player_id": "player_001",
+	"player_name": "主角",
+
+	"cultivation": {
+	  "spiritual": {
+		"system_id": "spiritual",
+		"realm_id": "qi_refining",
+		"realm_name_zh": "练气",
+		"realm_name_en": "Qi Refining",
+		"stage": 5,
+		"stage_max": 9,
+		"exp": 0,
+		"breakthrough_required": false
+	  },
+	  "body": {
+		"system_id": "body",
+		"realm_id": "body_tempering",
+		"realm_name_zh": "炼体",
+		"realm_name_en": "Body Tempering",
+		"stage": 7,
+		"stage_max": 9,
+		"exp": 0,
+		"breakthrough_required": false
+	  }
+	},
+
+	"base_stats": {
+	  "hp_max": 120,
+	  "mp_max": 95,
+	  "stamina_max": 130,
+	  "atk": 18,
+	  "def": 16,
+	  "mag": 20,
+	  "res": 18,
+	  "spd": 12,
+	  "agi": 12
+	},
+
+	"current_stats": {
+	  "hp": 120,
+	  "mp": 95,
+	  "stamina": 130
+	},
+
+	"derived_rules": {
+	  "spell_cost_resource": "mp",
+	  "physical_cost_resource": "stamina",
+	  "spiritual_growth_focus": ["mag", "res", "mp_max"],
+	  "body_growth_focus": ["atk", "def", "stamina_max"]
+	},
+
+	"battle_state": {
+	  "is_alive": true,
+	  "is_combat": false,
+	  "is_invincible": false,
+	  "is_casting": false,
+	  "is_moving": false,
+	  "is_dashing": false,
+	  "is_jumping": false,
+	  "is_on_ground": true,
+	  "is_locked_input": false
+	},
+
+	"map_state": {
+	  "current_map_id": "map_start_001",
+	  "spawn_point_id": "spawn_001",
+	  "position": {
+		"x": 0,
+		"y": 0
+	  },
+	  "facing": 1
+	},
+
+	"state_runtime": [],
+
+	"pet_system": {
+	  "active_pet_instance_id": "",
+	  "pet_slot_max": 3,
+	  "team_slot_max": 3
+	},
+
+	"capture_state": {
+	  "is_capturing": false,
+	  "target_enemy_id": "",
+	  "use_item_id": ""
+	},
+
+	"meta": {
+	  "money": 0,
+	  "free_stat_points": 0,
+	  "last_save_time": "",
+	  "play_time_sec": 0
+	},
+	"player_skill_state": {
+  "learned_methods": [
+	"mtd_na_ling",
+	"mtd_tie_mai",
+    "mtd_jy_yushou"
+  ],
+  "learned_method_skills": [
+	"ms_breath",
+	"ms_guard",
+	"ms_temper",
+	"ms_ling_qi",
+    "ms_blood_qi"
+  ],
+  "learned_skills": [
+	"sk_beng",
+	"sk_sweep",
+	"sk_step",
+	"sk_fireball",
+	"sk_water",
+	"sk_earth",
+	"sk_wood_bind",
+    "sk_metal"
+  ],
+  "equipped_active": [
+	"sk_beng",
+	"sk_step",
+	"sk_fireball",
+	"ms_guard",
+    "ms_ling_qi"
+  ],
+  "equipped_passive_methods": [
+	"mtd_na_ling",
+	"mtd_tie_mai",
+    "mtd_jy_yushou"
+  ]
+	}
+  }
+}
