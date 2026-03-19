@@ -1,0 +1,144 @@
+{
+  "element": "water",
+  "skills": [
+	{
+	  "id": "skill_301",
+	  "name": "水流弹",
+	  "element": "water",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 8,
+	  "cooldown": 2.4,
+	  "cast_time": 0.18,
+	  "range_type": "projectile",
+	  "target_type": "enemy",
+	  "power": 20,
+	  "desc": "凝聚水流形成水弹射向敌人。",
+	  "tags": ["projectile", "water"],
+	  "effect": {
+		"type": "single_projectile",
+		"params": {
+		  "projectile_speed": 12.0,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_302",
+	  "name": "潮尾拍击",
+	  "element": "water",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 10,
+	  "cooldown": 3.6,
+	  "cast_time": 0.16,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 24,
+	  "desc": "甩出潮汐般的尾击攻击近身目标。",
+	  "tags": ["aoe", "impact"],
+	  "effect": {
+		"type": "front_arc_attack",
+		"params": {
+		  "arc": 100,
+		  "range": 2.2,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_303",
+	  "name": "水幕护身",
+	  "element": "water",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 12,
+	  "cooldown": 8.0,
+	  "cast_time": 0.22,
+	  "range_type": "self",
+	  "target_type": "self",
+	  "power": 0,
+	  "desc": "在周身形成水幕，减少受到的伤害。",
+	  "tags": ["buff", "defense"],
+	  "effect": {
+		"type": "self_buff",
+		"params": {
+		  "buff": {
+			"damage_down": 0.18,
+			"res": 0.12
+		  },
+		  "duration": 5.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_304",
+	  "name": "漩流束缚",
+	  "element": "water",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 14,
+	  "cooldown": 5.5,
+	  "cast_time": 0.26,
+	  "range_type": "projectile",
+	  "target_type": "enemy",
+	  "power": 14,
+	  "desc": "释放旋转水流困住目标并拖慢其行动。",
+	  "tags": ["projectile", "slow", "control"],
+	  "effect": {
+		"type": "projectile_apply_state",
+		"params": {
+		  "projectile_speed": 10.5,
+		  "state": "slow",
+		  "chance": 1.0,
+		  "duration": 2.2
+		}
+	  }
+	},
+	{
+	  "id": "skill_305",
+	  "name": "激浪冲击",
+	  "element": "water",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 16,
+	  "cooldown": 6.2,
+	  "cast_time": 0.2,
+	  "range_type": "dash",
+	  "target_type": "enemy",
+	  "power": 30,
+	  "desc": "携带激流之势向前猛冲撞击敌人。",
+	  "tags": ["dash", "impact"],
+	  "effect": {
+		"type": "dash_attack",
+		"params": {
+		  "dash_distance": 3.4,
+		  "hit_count": 1,
+		  "knockback": 1.2
+		}
+	  }
+	},
+	{
+	  "id": "skill_306",
+	  "name": "深潮咆哮",
+	  "element": "water",
+	  "category": "必杀",
+	  "learn_type": "level",
+	  "mp_cost": 26,
+	  "cooldown": 16.0,
+	  "cast_time": 0.45,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 52,
+	  "desc": "召出深潮洪流冲刷前方范围内敌人。",
+	  "tags": ["ultimate", "aoe", "multi_hit"],
+	  "effect": {
+		"type": "large_area_multi_hit",
+		"params": {
+		  "radius": 3.0,
+		  "hit_count": 4
+		}
+	  }
+	}
+  ]
+}

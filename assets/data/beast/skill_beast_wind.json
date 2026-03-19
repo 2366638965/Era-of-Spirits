@@ -1,0 +1,245 @@
+{
+  "element": "wind",
+  "skills": [
+	{
+	  "id": "skill_005",
+	  "name": "疾风羽击",
+	  "element": "wind",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 6,
+	  "cooldown": 1.8,
+	  "cast_time": 0.12,
+	  "range_type": "projectile",
+	  "target_type": "enemy",
+	  "power": 16,
+	  "desc": "射出一片高速风羽。",
+	  "tags": ["projectile", "fast"],
+	  "effect": {
+		"type": "single_projectile",
+		"params": {
+		  "projectile_speed": 14.0,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_010",
+	  "name": "掠空滑翔",
+	  "element": "wind",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 9,
+	  "cooldown": 4.2,
+	  "cast_time": 0.1,
+	  "range_type": "air",
+	  "target_type": "self",
+	  "power": 0,
+	  "desc": "向前上方滑翔一段距离。",
+	  "tags": ["movement", "air", "dash"],
+	  "effect": {
+		"type": "air_dash",
+		"params": {
+		  "distance": 4.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_014",
+	  "name": "刃风回旋",
+	  "element": "wind",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 13,
+	  "cooldown": 5.0,
+	  "cast_time": 0.2,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 28,
+	  "desc": "快速旋身斩击周围敌人。",
+	  "tags": ["aoe", "slash", "combo"],
+	  "effect": {
+		"type": "self_center_multi_hit",
+		"params": {
+		  "radius": 2.0,
+		  "hit_count": 3
+		}
+	  }
+	},
+	{
+	  "id": "skill_026",
+	  "name": "游侠回身斩",
+	  "element": "wind",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 11,
+	  "cooldown": 4.0,
+	  "cast_time": 0.12,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 27,
+	  "desc": "快速绕背后发动斩击。",
+	  "tags": ["movement", "back_attack", "slash"],
+	  "effect": {
+		"type": "reposition_and_slash",
+		"params": {
+		  "prefer_back_position": true,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_027",
+	  "name": "王镰天袭",
+	  "element": "wind",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 20,
+	  "cooldown": 8.0,
+	  "cast_time": 0.25,
+	  "range_type": "air",
+	  "target_type": "enemy",
+	  "power": 42,
+	  "desc": "跃至空中后俯冲斩击地面。",
+	  "tags": ["air", "dive", "aoe"],
+	  "effect": {
+		"type": "air_dive_attack",
+		"params": {
+		  "radius": 2.3,
+		  "hit_count": 2
+		}
+	  }
+	},
+	{
+	  "id": "skill_028",
+	  "name": "风羽散射",
+	  "element": "wind",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 12,
+	  "cooldown": 4.8,
+	  "cast_time": 0.22,
+	  "range_type": "projectile",
+	  "target_type": "enemy",
+	  "power": 24,
+	  "desc": "朝前方扇形射出多枚风羽。",
+	  "tags": ["projectile", "multi_shot"],
+	  "effect": {
+		"type": "fan_projectiles",
+		"params": {
+		  "projectile_count": 5,
+		  "projectile_speed": 10.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_035",
+	  "name": "风切升跃",
+	  "element": "wind",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 12,
+	  "cooldown": 4.2,
+	  "cast_time": 0.14,
+	  "range_type": "air",
+	  "target_type": "enemy",
+	  "power": 26,
+	  "desc": "向上挑斩并将敌人击飞。",
+	  "tags": ["launcher", "air", "slash"],
+	  "effect": {
+		"type": "launch_hit",
+		"params": {
+		  "launch_force": 2.2,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_036",
+	  "name": "叶翼风暴",
+	  "element": "wind",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 24,
+	  "cooldown": 10.5,
+	  "cast_time": 0.35,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 48,
+	  "desc": "挥动叶翼形成持续旋风切割区域。",
+	  "tags": ["aoe", "multi_hit", "storm"],
+	  "effect": {
+		"type": "persistent_aoe",
+		"params": {
+		  "radius": 2.5,
+		  "duration": 3.0,
+		  "hit_interval": 0.5
+		}
+	  }
+	},
+	{
+	  "id": "skill_039",
+	  "name": "风羽急返",
+	  "element": "wind",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 10,
+	  "cooldown": 5.0,
+	  "cast_time": 0.1,
+	  "range_type": "movement",
+	  "target_type": "self",
+	  "power": 0,
+	  "desc": "迅速后撤，适合拉开距离。",
+	  "tags": ["movement", "escape"],
+	  "effect": {
+		"type": "backstep",
+		"params": {
+		  "distance": 3.2
+		}
+	  }
+	},
+	{
+	  "id": "skill_043",
+	  "name": "王刃六连",
+	  "element": "wind",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 22,
+	  "cooldown": 7.5,
+	  "cast_time": 0.2,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 46,
+	  "desc": "对前方进行六段高速连斩。",
+	  "tags": ["combo", "melee", "finisher"],
+	  "effect": {
+		"type": "melee_combo",
+		"params": {
+		  "hit_count": 6
+		}
+	  }
+	},
+	{
+	  "id": "skill_049",
+	  "name": "裂空镰翼",
+	  "element": "wind",
+	  "category": "必杀",
+	  "learn_type": "level",
+	  "mp_cost": 32,
+	  "cooldown": 18.0,
+	  "cast_time": 0.5,
+	  "range_type": "air",
+	  "target_type": "enemy",
+	  "power": 60,
+	  "desc": "展开镰翼高速切裂前方大片区域。",
+	  "tags": ["ultimate", "air", "slash", "pierce"],
+	  "effect": {
+		"type": "forward_multi_slash_wave",
+		"params": {
+		  "wave_count": 3,
+		  "max_targets": 5
+		}
+	  }
+	}
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "element": "metal",
+  "skills": [
+	{
+	  "id": "skill_201",
+	  "name": "护身扑咬",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 6,
+	  "cooldown": 2.0,
+	  "cast_time": 0.1,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 18,
+	  "desc": "迅速扑向目标并撕咬。",
+	  "tags": ["melee", "bite"],
+	  "effect": {
+		"type": "melee_hit",
+		"params": {
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_202",
+	  "name": "灵尾扫击",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 8,
+	  "cooldown": 3.5,
+	  "cast_time": 0.12,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 20,
+	  "desc": "挥动金属化尾部横扫周围目标。",
+	  "tags": ["aoe", "impact"],
+	  "effect": {
+		"type": "front_arc_attack",
+		"params": {
+		  "arc": 110,
+		  "range": 2.0,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_203",
+	  "name": "御灵低吼",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 10,
+	  "cooldown": 6.0,
+	  "cast_time": 0.2,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 10,
+	  "desc": "发出低吼震慑前方敌人，短暂削弱其攻势。",
+	  "tags": ["debuff", "aoe"],
+	  "effect": {
+		"type": "enemy_aoe_debuff",
+		"params": {
+		  "radius": 2.5,
+		  "debuff": {
+			"atk_down": 0.1,
+			"spd_down": 0.08
+		  },
+		  "duration": 4.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_204",
+	  "name": "灵卫跃袭",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 12,
+	  "cooldown": 5.0,
+	  "cast_time": 0.14,
+	  "range_type": "dash",
+	  "target_type": "enemy",
+	  "power": 26,
+	  "desc": "跃起冲向目标发动扑杀。",
+	  "tags": ["dash", "jump", "melee"],
+	  "effect": {
+		"type": "jump_attack",
+		"params": {
+		  "distance": 3.0,
+		  "hit_count": 1,
+		  "knockback": 1.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_205",
+	  "name": "金芒爪",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 9,
+	  "cooldown": 2.4,
+	  "cast_time": 0.14,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 22,
+	  "desc": "以金灵气附着前爪进行斩击。",
+	  "tags": ["melee", "slash"],
+	  "effect": {
+		"type": "melee_hit",
+		"params": {
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_206",
+	  "name": "锋光弹",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 12,
+	  "cooldown": 3.0,
+	  "cast_time": 0.22,
+	  "range_type": "projectile",
+	  "target_type": "enemy",
+	  "power": 24,
+	  "desc": "凝聚金系锋芒之气射出光弹。",
+	  "tags": ["projectile", "metal"],
+	  "effect": {
+		"type": "single_projectile",
+		"params": {
+		  "projectile_speed": 12.5,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_207",
+	  "name": "裂金风刃",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 15,
+	  "cooldown": 5.0,
+	  "cast_time": 0.25,
+	  "range_type": "projectile",
+	  "target_type": "enemy",
+	  "power": 30,
+	  "desc": "挥出一道带有锋锐切割力的金行风刃。",
+	  "tags": ["projectile", "pierce", "slash"],
+	  "effect": {
+		"type": "piercing_projectile",
+		"params": {
+		  "projectile_speed": 14.0,
+		  "max_targets": 3
+		}
+	  }
+	},
+	{
+	  "id": "skill_208",
+	  "name": "金灵护纹",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 14,
+	  "cooldown": 8.5,
+	  "cast_time": 0.2,
+	  "range_type": "self",
+	  "target_type": "self",
+	  "power": 0,
+	  "desc": "在体表浮现金灵护纹，提升抗性与生存。",
+	  "tags": ["buff", "defense"],
+	  "effect": {
+		"type": "self_buff",
+		"params": {
+		  "buff": {
+			"res": 0.18,
+			"def": 0.12
+		  },
+		  "duration": 6.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_209",
+	  "name": "赤牙冲咬",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 7,
+	  "cooldown": 2.2,
+	  "cast_time": 0.1,
+	  "range_type": "dash",
+	  "target_type": "enemy",
+	  "power": 24,
+	  "desc": "向前猛冲后撕咬目标。",
+	  "tags": ["dash", "bite", "melee"],
+	  "effect": {
+		"type": "dash_attack",
+		"params": {
+		  "dash_distance": 2.8,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_210",
+	  "name": "赤锋撕裂",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 10,
+	  "cooldown": 4.0,
+	  "cast_time": 0.16,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 28,
+	  "desc": "连续挥出带有赤金锐气的撕裂爪击。",
+	  "tags": ["combo", "melee", "slash"],
+	  "effect": {
+		"type": "melee_combo",
+		"params": {
+		  "hit_count": 2
+		}
+	  }
+	},
+	{
+	  "id": "skill_211",
+	  "name": "裂甲突袭",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 13,
+	  "cooldown": 5.8,
+	  "cast_time": 0.14,
+	  "range_type": "dash",
+	  "target_type": "enemy",
+	  "power": 30,
+	  "desc": "高速突进并以锋锐冲势破开防御。",
+	  "tags": ["dash", "impact", "break"],
+	  "effect": {
+		"type": "dash_attack_apply_state",
+		"params": {
+		  "dash_distance": 3.4,
+		  "state": "shield_break",
+		  "duration": 4.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_212",
+	  "name": "赤金猎杀",
+	  "element": "metal",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 18,
+	  "cooldown": 8.0,
+	  "cast_time": 0.2,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 38,
+	  "desc": "对虚弱目标发动凶猛追击，造成更高伤害。",
+	  "tags": ["execute", "melee"],
+	  "effect": {
+		"type": "bonus_hit_if_target_hp_low",
+		"params": {
+		  "target_hp_percent_lte": 0.4,
+		  "bonus_power": 16,
+		  "hit_count": 1
+		}
+	  }
+	}
+  ]
+}

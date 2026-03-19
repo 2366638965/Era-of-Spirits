@@ -6,6 +6,22 @@
 [ext_resource type="Texture2D" uid="uid://c4t3ijiepyf80" path="res://assets/sprites/player/bat_run.png" id="4_yyud5"]
 [ext_resource type="Texture2D" uid="uid://bxb33ugpxtmgu" path="res://assets/sprites/player/bat_walk.png" id="5_gous1"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_igr2g"]
+atlas = ExtResource("3_6my2y")
+region = Rect2(750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bobl8"]
+atlas = ExtResource("3_6my2y")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efek5"]
+atlas = ExtResource("3_6my2y")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdfly"]
+atlas = ExtResource("3_6my2y")
+region = Rect2(0, 0, 250, 250)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_vnoas"]
 atlas = ExtResource("1_cdb0y")
 region = Rect2(0, 0, 250, 250)
@@ -74,22 +90,6 @@ region = Rect2(750, 0, 250, 250)
 atlas = ExtResource("2_neb0r")
 region = Rect2(1000, 0, 250, 250)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_igr2g"]
-atlas = ExtResource("3_6my2y")
-region = Rect2(750, 0, 250, 250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bobl8"]
-atlas = ExtResource("3_6my2y")
-region = Rect2(500, 0, 250, 250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_efek5"]
-atlas = ExtResource("3_6my2y")
-region = Rect2(250, 0, 250, 250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sdfly"]
-atlas = ExtResource("3_6my2y")
-region = Rect2(0, 0, 250, 250)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_wx8gi"]
 atlas = ExtResource("4_yyud5")
 region = Rect2(750, 0, 250, 250)
@@ -154,6 +154,23 @@ region = Rect2(0, 250, 250, 250)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_igr2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bobl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efek5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdfly")
+}],
+"loop": true,
+"name": &"attack_boxing_right",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_vnoas")
 }, {
 "duration": 1.0,
@@ -212,23 +229,6 @@ animations = [{
 "loop": true,
 "name": &"jump_right",
 "speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_igr2g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bobl8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_efek5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sdfly")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,

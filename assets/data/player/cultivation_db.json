@@ -1,0 +1,148 @@
+{
+  "cultivation_systems": {
+	"spiritual": [
+	  {
+		"realm_id": "qi_refining",
+		"name_zh": "练气",
+		"name_en": "Qi Refining",
+		"stage_max": 9,
+		"full_realm_exp": 900,
+		"growth_focus": ["mag", "res", "mp_max"],
+		"growth_bonus_per_stage": {
+		  "mag": 2,
+		  "res": 2,
+		  "mp_max": 8
+		},
+		"breakthrough_to": "foundation"
+	  },
+	  {
+		"realm_id": "foundation",
+		"name_zh": "筑基",
+		"name_en": "Foundation Establishment",
+		"stage_max": 9,
+		"full_realm_exp": 2400,
+		"growth_focus": ["mag", "res", "mp_max"],
+		"growth_bonus_per_stage": {
+		  "mag": 3,
+		  "res": 3,
+		  "mp_max": 12
+		},
+		"breakthrough_to": "gold_core"
+	  },
+	  {
+		"realm_id": "gold_core",
+		"name_zh": "金丹",
+		"name_en": "Golden Core",
+		"stage_max": 9,
+		"full_realm_exp": 5600,
+		"growth_focus": ["mag", "res", "mp_max"],
+		"growth_bonus_per_stage": {
+		  "mag": 5,
+		  "res": 4,
+		  "mp_max": 18
+		},
+		"breakthrough_to": "nascent_soul"
+	  },
+	  {
+		"realm_id": "nascent_soul",
+		"name_zh": "元婴",
+		"name_en": "Nascent Soul",
+		"stage_max": 9,
+		"full_realm_exp": 10800,
+		"growth_focus": ["mag", "res", "mp_max"],
+		"growth_bonus_per_stage": {
+		  "mag": 7,
+		  "res": 6,
+		  "mp_max": 25
+		},
+		"breakthrough_to": "divine_transformation"
+	  },
+	  {
+		"realm_id": "divine_transformation",
+		"name_zh": "化神",
+		"name_en": "Divine Transformation",
+		"stage_max": 9,
+		"full_realm_exp": 18000,
+		"growth_focus": ["mag", "res", "mp_max"],
+		"growth_bonus_per_stage": {
+		  "mag": 10,
+		  "res": 8,
+		  "mp_max": 35
+		},
+		"breakthrough_to": ""
+	  }
+	],
+	"body": [
+	  {
+		"realm_id": "body_tempering",
+		"name_zh": "炼体",
+		"name_en": "Body Tempering",
+		"stage_max": 9,
+		"full_realm_exp": 840,
+		"growth_focus": ["atk", "def", "stamina_max"],
+		"growth_bonus_per_stage": {
+		  "atk": 2,
+		  "def": 2,
+		  "stamina_max": 10
+		},
+		"breakthrough_to": "bone_forging"
+	  },
+	  {
+		"realm_id": "bone_forging",
+		"name_zh": "锻骨",
+		"name_en": "Bone Forging",
+		"stage_max": 9,
+		"full_realm_exp": 2200,
+		"growth_focus": ["atk", "def", "stamina_max"],
+		"growth_bonus_per_stage": {
+		  "atk": 3,
+		  "def": 3,
+		  "stamina_max": 14
+		},
+		"breakthrough_to": "meridian_opening"
+	  },
+	  {
+		"realm_id": "meridian_opening",
+		"name_zh": "通脉",
+		"name_en": "Meridian Opening",
+		"stage_max": 9,
+		"full_realm_exp": 5100,
+		"growth_focus": ["atk", "def", "stamina_max"],
+		"growth_bonus_per_stage": {
+		  "atk": 5,
+		  "def": 4,
+		  "stamina_max": 18
+		},
+		"breakthrough_to": "blood_moving"
+	  },
+	  {
+		"realm_id": "blood_moving",
+		"name_zh": "搬血",
+		"name_en": "Blood Moving",
+		"stage_max": 9,
+		"full_realm_exp": 9800,
+		"growth_focus": ["atk", "def", "stamina_max"],
+		"growth_bonus_per_stage": {
+		  "atk": 7,
+		  "def": 6,
+		  "stamina_max": 24
+		},
+		"breakthrough_to": "golden_body"
+	  },
+	  {
+		"realm_id": "golden_body",
+		"name_zh": "金身",
+		"name_en": "Golden Body",
+		"stage_max": 9,
+		"full_realm_exp": 16500,
+		"growth_focus": ["atk", "def", "stamina_max"],
+		"growth_bonus_per_stage": {
+		  "atk": 10,
+		  "def": 8,
+		  "stamina_max": 30
+		},
+		"breakthrough_to": ""
+	  }
+	]
+  }
+}

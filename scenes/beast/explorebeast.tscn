@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ch3cpovhhunxk"]
 
-[ext_resource type="SpriteFrames" uid="uid://qpn6eco7fh30" path="res://assets/animations/beast/clouddog.tres" id="1_3k76t"]
-[ext_resource type="Script" path="res://scripts/beast/explore_beast.gd" id="2_beast_ai"]
+[ext_resource type="SpriteFrames" uid="uid://qpn6eco7fh30" path="res://assets/animations/beast/spirit11.tres" id="1_3k76t"]
+[ext_resource type="Script" uid="uid://bh5r7w612j6gp" path="res://scripts/beast/explore_beast.gd" id="2_beast_ai"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3k76t"]
 size = Vector2(24.779877, 20.916527)
@@ -17,7 +17,7 @@ script = ExtResource("2_beast_ai")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1152727048]
 scale = Vector2(0.2, 0.2)
 sprite_frames = ExtResource("1_3k76t")
-animation = &"run_up"
+animation = &"sleep_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=670958053]
 position = Vector2(2.3841858e-07, -0.5000002)

@@ -1,0 +1,250 @@
+{
+  "element": "wood",
+  "skills": [
+	{
+	  "id": "skill_001",
+	  "name": "短冲爪击",
+	  "element": "wood",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 6,
+	  "cooldown": 2.0,
+	  "cast_time": 0.15,
+	  "range_type": "dash",
+	  "target_type": "enemy",
+	  "power": 18,
+	  "desc": "向前短距离突进并挥爪攻击。",
+	  "tags": ["dash", "melee", "starter"],
+	  "effect": {
+		"type": "dash_attack",
+		"params": {
+		  "dash_distance": 2.5,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_003",
+	  "name": "镰臂斩",
+	  "element": "wood",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 5,
+	  "cooldown": 1.5,
+	  "cast_time": 0.1,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 17,
+	  "desc": "使用前肢快速斩击。",
+	  "tags": ["melee", "slash"],
+	  "effect": {
+		"type": "melee_hit",
+		"params": {
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_009",
+	  "name": "叶刃连切",
+	  "element": "wood",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 8,
+	  "cooldown": 2.4,
+	  "cast_time": 0.18,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 24,
+	  "desc": "连续挥出两段叶刃斩击。",
+	  "tags": ["melee", "combo"],
+	  "effect": {
+		"type": "melee_combo",
+		"params": {
+		  "hit_count": 2
+		}
+	  }
+	},
+	{
+	  "id": "skill_012",
+	  "name": "藤缚突",
+	  "element": "wood",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 12,
+	  "cooldown": 6.5,
+	  "cast_time": 0.2,
+	  "range_type": "dash",
+	  "target_type": "enemy",
+	  "power": 26,
+	  "desc": "高速突刺后释放藤蔓束缚目标。",
+	  "tags": ["dash", "bind", "control"],
+	  "effect": {
+		"type": "dash_attack_apply_state",
+		"params": {
+		  "dash_distance": 3.5,
+		  "state": "bind",
+		  "duration": 1.5
+		}
+	  }
+	},
+	{
+	  "id": "skill_018",
+	  "name": "林跃扑袭",
+	  "element": "wood",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 7,
+	  "cooldown": 3.5,
+	  "cast_time": 0.12,
+	  "range_type": "dash",
+	  "target_type": "enemy",
+	  "power": 19,
+	  "desc": "借力跃起扑向目标。",
+	  "tags": ["dash", "jump", "melee"],
+	  "effect": {
+		"type": "jump_attack",
+		"params": {
+		  "distance": 2.8,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_020",
+	  "name": "疾叶突斩",
+	  "element": "wood",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 10,
+	  "cooldown": 3.2,
+	  "cast_time": 0.14,
+	  "range_type": "dash",
+	  "target_type": "enemy",
+	  "power": 25,
+	  "desc": "向前突进并进行斩击。",
+	  "tags": ["dash", "slash"],
+	  "effect": {
+		"type": "dash_attack",
+		"params": {
+		  "dash_distance": 3.2,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_025",
+	  "name": "迅藤连刺",
+	  "element": "wood",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 14,
+	  "cooldown": 4.5,
+	  "cast_time": 0.18,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 31,
+	  "desc": "以高速连续刺击前方敌人。",
+	  "tags": ["combo", "melee", "fast"],
+	  "effect": {
+		"type": "melee_combo",
+		"params": {
+		  "hit_count": 4
+		}
+	  }
+	},
+	{
+	  "id": "skill_034",
+	  "name": "藤影穿梭",
+	  "element": "wood",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 16,
+	  "cooldown": 5.2,
+	  "cast_time": 0.1,
+	  "range_type": "dash",
+	  "target_type": "enemy",
+	  "power": 30,
+	  "desc": "快速穿过敌人并在身后留下藤刺。",
+	  "tags": ["dash", "trap", "movement"],
+	  "effect": {
+		"type": "pass_through_and_spawn_trap",
+		"params": {
+		  "dash_distance": 4.0,
+		  "trap_duration": 4.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_041",
+	  "name": "缚藤猎杀",
+	  "element": "wood",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 20,
+	  "cooldown": 8.2,
+	  "cast_time": 0.22,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 40,
+	  "desc": "对被束缚目标发动强化追击。",
+	  "tags": ["execute", "bind_bonus"],
+	  "effect": {
+		"type": "bonus_hit_if_target_state",
+		"params": {
+		  "target_state": "bind",
+		  "bonus_power": 18,
+		  "hit_count": 2
+		}
+	  }
+	},
+	{
+	  "id": "skill_048",
+	  "name": "青藤乱舞",
+	  "element": "wood",
+	  "category": "必杀",
+	  "learn_type": "level",
+	  "mp_cost": 28,
+	  "cooldown": 16.0,
+	  "cast_time": 0.45,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 55,
+	  "desc": "召出大量藤蔓连续突刺周围敌人。",
+	  "tags": ["ultimate", "aoe", "multi_hit", "bind"],
+	  "effect": {
+		"type": "large_area_multi_hit",
+		"params": {
+		  "radius": 3.2,
+		  "hit_count": 5,
+		  "bind_chance": 0.35,
+		  "bind_duration": 1.5
+		}
+	  }
+	},
+	{
+	  "id": "skill_053",
+	  "name": "叶翼王域",
+	  "element": "wood",
+	  "category": "必杀",
+	  "learn_type": "level",
+	  "mp_cost": 35,
+	  "cooldown": 22.0,
+	  "cast_time": 0.7,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 68,
+	  "desc": "展开叶翼领域，对范围内敌人持续切割并减速。",
+	  "tags": ["ultimate", "field", "aoe", "slow"],
+	  "effect": {
+		"type": "damage_field",
+		"params": {
+		  "radius": 3.8,
+		  "duration": 4.0,
+		  "hit_interval": 0.5,
+		  "slow": 0.2
+		}
+	  }
+	}
+  ]
+}

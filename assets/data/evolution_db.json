@@ -67,6 +67,28 @@
 		"level_gte": 34,
 		"required_skill_id": "skill_035"
 	  }
+	},
+	{
+	  "id": "evo_011",
+	  "from_species_id": 11,
+	  "to_species_id": 12,
+	  "method": "level",
+	  "name_zh": "等级进化",
+	  "desc": "御灵犬成长到一定阶段后进化为金灵犬。",
+	  "conditions": {
+		"level_gte": 18
+	  }
+	},
+	{
+	  "id": "evo_012",
+	  "from_species_id": 12,
+	  "to_species_id": 13,
+	  "method": "level",
+	  "name_zh": "等级进化",
+	  "desc": "金灵犬成长到更高阶段后进化为赤金犬。",
+	  "conditions": {
+		"level_gte": 36
+	  }
 	}
   ]
 }

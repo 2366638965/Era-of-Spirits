@@ -1,153 +1,398 @@
 [gd_scene format=3 uid="uid://dhgf62n4hh7gd"]
 
-[ext_resource type="VideoStream" uid="uid://buji8yvepvrq2" path="res://assets/background/menu.ogv" id="1_b00nv"]
-
-[sub_resource type="AudioStream" id="AudioStream_b00nv"]
+[ext_resource type="AudioStream" uid="uid://cdlfxepdj6bmr" path="res://assets/audio/menu.wav" id="2_u31jx"]
+[ext_resource type="Script" uid="uid://bvrft4q4km3jq" path="res://ui/MainMenu.gd" id="3_m6rjd"]
+[ext_resource type="Texture2D" uid="uid://bjtaxd2qg8mw1" path="res://assets/tiles/ui/istitle.png" id="4_3v0os"]
+[ext_resource type="Texture2D" uid="uid://bo6axpn5i2d3q" path="res://assets/tiles/ui/menu_box.png" id="5_j0t0e"]
 
 [node name="MainMenu" type="Control" unique_id=1065234718]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_m6rjd")
 
 [node name="SafeArea" type="MarginContainer" parent="." unique_id=43827716]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 650.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="RootLayer" type="Control" parent="SafeArea" unique_id=611643840]
 layout_mode = 2
 mouse_filter = 1
 
 [node name="VideoLayer" type="Control" parent="SafeArea/RootLayer" unique_id=498315469]
-anchors_preset = 0
-offset_right = 805.0
-offset_bottom = 649.0
+z_index = -20
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
-[node name="BackgroundVideo" type="VideoStreamPlayer" parent="SafeArea/RootLayer/VideoLayer" unique_id=439702261]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 646.0
+[node name="BackgroundVideo" type="Control" parent="SafeArea/RootLayer/VideoLayer" unique_id=439702261]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-stream = ExtResource("1_b00nv")
-volume_db = -11.999999
-autoplay = true
-expand = true
-loop = true
 
 [node name="OverlayLayer" type="Control" parent="SafeArea/RootLayer" unique_id=1496508241]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+visible = false
+z_index = -10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
-[node name="TopGradient" type="TextureRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=1208515567]
+[node name="TopGradient" type="ColorRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=1208515567]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 0.34
+mouse_filter = 2
+color = Color(0, 0, 0, 0.4)
 
-[node name="BottomGradient" type="TextureRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=1517969561]
+[node name="BottomGradient" type="ColorRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=1517969561]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_top = 0.62
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.46)
 
-[node name="CenterSoftGlow" type="TextureRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=2141710955]
+[node name="CenterSoftGlow" type="ColorRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=2141710955]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_left = 0.18
+anchor_top = 0.2
+anchor_right = 0.82
+anchor_bottom = 0.72
+mouse_filter = 2
+color = Color(0.95, 1, 1, 0.05)
 
-[node name="Vignette" type="TextureRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=152213506]
+[node name="Vignette" type="ColorRect" parent="SafeArea/RootLayer/OverlayLayer" unique_id=152213506]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.08)
 
 [node name="TitleLayer" type="Control" parent="SafeArea/RootLayer" unique_id=1016163593]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+z_index = 10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
-[node name="TitleGroup" type="CenterContainer" parent="SafeArea/RootLayer/TitleLayer" unique_id=140200291]
+[node name="TitleLogo" type="TextureRect" parent="SafeArea/RootLayer/TitleLayer" unique_id=642192997]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TitleGlow" type="TextureRect" parent="SafeArea/RootLayer/TitleLayer/TitleGroup" unique_id=424962506]
-layout_mode = 2
-
-[node name="TitleLogo" type="TextureRect" parent="SafeArea/RootLayer/TitleLayer/TitleGroup" unique_id=642192997]
-layout_mode = 2
+offset_left = 20.0
+offset_top = 23.0
+offset_right = 596.0
+offset_bottom = 209.0
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("4_3v0os")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="SubtitleLabel" type="Label" parent="SafeArea/RootLayer/TitleLayer" unique_id=89800919]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 55.0
+offset_top = 170.0
+offset_right = 631.0
+offset_bottom = 230.0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(0.98, 0.87, 0.22, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.95)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 34
+text = "Click Anywhere"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="MenuLayer" type="Control" parent="SafeArea/RootLayer" unique_id=2079635188]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+z_index = 20
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuBackground" type="TextureRect" parent="SafeArea/RootLayer/MenuLayer" unique_id=75708847]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = -306.0
+offset_right = 442.0
+offset_bottom = 374.0
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_j0t0e")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="MenuAnchor" type="MarginContainer" parent="SafeArea/RootLayer/MenuLayer" unique_id=1261188857]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 84.0
+offset_top = -182.0
+offset_right = 361.0
+offset_bottom = 182.0
 
 [node name="ButtonPanel" type="VBoxContainer" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor" unique_id=630827086]
 layout_mode = 2
+theme_override_constants/separation = 12
 
-[node name="NewGameBtn" type="TextureButton" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=646556345]
+[node name="NewGameBtn" type="Button" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=646556345]
+custom_minimum_size = Vector2(250, 82)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "New Game"
 
-[node name="LoadGameBtn" type="TextureButton" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=1689877360]
+[node name="LoadGameBtn" type="Button" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=1689877360]
+custom_minimum_size = Vector2(250, 82)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Load Save"
 
-[node name="SettingsBtn" type="TextureButton" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=527103958]
+[node name="SettingsBtn" type="Button" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=527103958]
+custom_minimum_size = Vector2(250, 82)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Settings"
 
-[node name="ExitBtn" type="TextureButton" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=2069769472]
+[node name="ExitBtn" type="Button" parent="SafeArea/RootLayer/MenuLayer/MenuAnchor/ButtonPanel" unique_id=2069769472]
+custom_minimum_size = Vector2(250, 82)
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+text = "Exit"
 
 [node name="VersionLabel" type="Label" parent="SafeArea/RootLayer/MenuLayer" unique_id=2582368]
+visible = false
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -26.0
+offset_right = 240.0
+offset_bottom = -6.0
+theme_override_colors/font_color = Color(0.86, 0.89, 1, 0.8)
+text = "v0.1.0-dev"
 
 [node name="FXLayer" type="Control" parent="SafeArea/RootLayer" unique_id=1530004891]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="FrontFog" type="TextureRect" parent="SafeArea/RootLayer/FXLayer" unique_id=705011486]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="LightDust" type="GPUParticles2D" parent="SafeArea/RootLayer/FXLayer" unique_id=1088924992]
+emitting = false
 
 [node name="PopupLayer" type="CanvasLayer" parent="SafeArea/RootLayer" unique_id=789160193]
+layer = 30
 
 [node name="LoadMenuHolder" type="Control" parent="SafeArea/RootLayer/PopupLayer" unique_id=1113323025]
+visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="SettingsMenuHolder" type="Control" parent="SafeArea/RootLayer/PopupLayer" unique_id=1779876138]
+visible = false
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SettingsBackdrop" type="ColorRect" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder" unique_id=2127857321]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.58)
+
+[node name="SettingsPanel" type="PanelContainer" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder" unique_id=1192591036]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -240.0
+offset_right = 290.0
+offset_bottom = 240.0
+
+[node name="SettingsMargin" type="MarginContainer" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel" unique_id=615058776]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 18
+
+[node name="SettingsVBox" type="VBoxContainer" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin" unique_id=353299979]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SettingsTitle" type="Label" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox" unique_id=1252928179]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="MasterMuteCheck" type="CheckBox" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox" unique_id=1455952204]
+layout_mode = 2
+text = "Mute Master Audio"
+
+[node name="MasterVolumeRow" type="HBoxContainer" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox" unique_id=2135702523]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MasterVolumeLabel" type="Label" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/MasterVolumeRow" unique_id=436825015]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Master Volume"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/MasterVolumeRow" unique_id=543218606]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 80.0
+
+[node name="MasterVolumeValue" type="Label" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/MasterVolumeRow" unique_id=1733205665]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+text = "80%"
+horizontal_alignment = 2
+
+[node name="BgmEnableCheck" type="CheckBox" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox" unique_id=1039749578]
+layout_mode = 2
+button_pressed = true
+text = "Enable BGM"
+
+[node name="BgmVolumeRow" type="HBoxContainer" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox" unique_id=1772568567]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BgmVolumeLabel" type="Label" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/BgmVolumeRow" unique_id=284528888]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "BGM Volume"
+
+[node name="BgmVolumeSlider" type="HSlider" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/BgmVolumeRow" unique_id=1018107371]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 80.0
+
+[node name="BgmVolumeValue" type="Label" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/BgmVolumeRow" unique_id=480006766]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+text = "80%"
+horizontal_alignment = 2
+
+[node name="SfxEnableCheck" type="CheckBox" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox" unique_id=1676112108]
+layout_mode = 2
+button_pressed = true
+text = "Enable SFX"
+
+[node name="SfxVolumeRow" type="HBoxContainer" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox" unique_id=1341003923]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SfxVolumeLabel" type="Label" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/SfxVolumeRow" unique_id=23249417]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="SfxVolumeSlider" type="HSlider" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/SfxVolumeRow" unique_id=1717771399]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 80.0
+
+[node name="SfxVolumeValue" type="Label" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/SfxVolumeRow" unique_id=1872476456]
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+text = "80%"
+horizontal_alignment = 2
+
+[node name="FullscreenCheck" type="CheckBox" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox" unique_id=1537904708]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="SettingsButtonRow" type="HBoxContainer" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox" unique_id=1429306012]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ButtonSpacer" type="Control" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/SettingsButtonRow" unique_id=1532586501]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResetSettingsBtn" type="Button" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/SettingsButtonRow" unique_id=1746083791]
+layout_mode = 2
+text = "Reset"
+
+[node name="ApplySettingsBtn" type="Button" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/SettingsButtonRow" unique_id=1310445922]
+layout_mode = 2
+text = "Apply"
+
+[node name="CloseSettingsBtn" type="Button" parent="SafeArea/RootLayer/PopupLayer/SettingsMenuHolder/SettingsPanel/SettingsMargin/SettingsVBox/SettingsButtonRow" unique_id=332703730]
+layout_mode = 2
+text = "Close"
 
 [node name="FadeLayer" type="ColorRect" parent="SafeArea/RootLayer" unique_id=626790717]
+z_index = 100
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1637719967]
 
 [node name="MenuBgm" type="AudioStreamPlayer" parent="." unique_id=1876070106]
-stream = SubResource("AudioStream_b00nv")
+stream = ExtResource("2_u31jx")
+volume_db = -8.0
+autoplay = true
 
 [node name="UiSfxHover" type="AudioStreamPlayer" parent="." unique_id=576510610]
 

@@ -1,28 +1,30 @@
 [gd_scene format=3 uid="uid://dy412j228t1bw"]
 
 [ext_resource type="SpriteFrames" uid="uid://cq0xb0aopfnf6" path="res://assets/animations/player/battleplayer.tres" id="1_nvj88"]
+[ext_resource type="Script" uid="uid://cv0eoqvn7le0h" path="res://scripts/player/battleplayer.gd" id="2_sq3tm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvj88"]
-size = Vector2(88, 209)
+size = Vector2(88, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4oxn"]
-size = Vector2(67, 209)
+size = Vector2(67, 68.5)
 
 [node name="battlep" type="CharacterBody2D" unique_id=941227138]
+script = ExtResource("2_sq3tm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=251616457]
-position = Vector2(1, 2.5)
+position = Vector2(1, 92.5)
 shape = SubResource("RectangleShape2D_nvj88")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=587907285]
 texture_filter = 1
 sprite_frames = ExtResource("1_nvj88")
-animation = &"new_animation"
+animation = &"jump_right"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=813583170]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1175349795]
-position = Vector2(-1.5, 1.5)
+position = Vector2(-1, 79.25)
 shape = SubResource("RectangleShape2D_i4oxn")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1871045286]

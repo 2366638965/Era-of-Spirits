@@ -1,0 +1,11 @@
+{
+  "skill_table_map": {
+	"metal": "res://assets/data/skill/skill_beast_metal.json",
+	"wood": "skill_beast_wood.json",
+	"fire": "skill_beast_fire.json",
+	"earth": "skill_beast_earth.json",
+	"water": "skill_beast_water.json",
+	"wind": "skill_beast_wind.json",
+	"spirit": "skill_beast_spirit.json"
+  }
+}

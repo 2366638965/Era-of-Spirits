@@ -1,0 +1,52 @@
+{
+  "elements": [
+	{
+	  "id": "wood",
+	  "name_zh": "木",
+	  "name_en": "Wood",
+	  "color": "#5FAF4B",
+	  "icon": "icon_element_wood",
+	  "desc": "偏向生长、束缚、恢复与持续压制。"
+	},
+	{
+	  "id": "earth",
+	  "name_zh": "土",
+	  "name_en": "Earth",
+	  "color": "#A97B50",
+	  "icon": "icon_element_earth",
+	  "desc": "偏向防御、护盾、击退与稳固。"
+	},
+	{
+	  "id": "fire",
+	  "name_zh": "火",
+	  "name_en": "Fire",
+	  "color": "#E2583E",
+	  "icon": "icon_element_fire",
+	  "desc": "偏向爆发、灼烧与持续伤害。"
+	},
+	{
+	  "id": "wind",
+	  "name_zh": "风",
+	  "name_en": "Wind",
+	  "color": "#7CC7C9",
+	  "icon": "icon_element_wind",
+	  "desc": "偏向速度、位移、连击与空战。"
+	},
+	{
+	  "id": "spirit",
+	  "name_zh": "灵",
+	  "name_en": "Spirit",
+	  "color": "#9B7BFF",
+	  "icon": "icon_element_spirit",
+	  "desc": "偏向灵力、异常、辅助与特殊能量。"
+	},
+	{
+  "id": "metal",
+  "name_zh": "金",
+  "name_en": "Metal",
+  "color": "#C9B36B",
+  "icon": "icon_element_metal",
+  "desc": "偏向锋锐、破甲、穿透与高爆发。"
+}
+  ]
+}

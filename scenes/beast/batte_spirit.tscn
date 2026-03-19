@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://da41yuemafg1h"]
+
+[ext_resource type="SpriteFrames" uid="uid://ckhnh7kf7vri2" path="res://assets/animations/beast/battle_spirit11.tres" id="1_55ewd"]
+[ext_resource type="Texture2D" uid="uid://bcmty7vt6ri50" path="res://assets/sprites/beast/spirit11_b.png" id="2_ppo2p"]
+[ext_resource type="Script" uid="uid://dcgk4wcoj355i" path="res://scripts/beast/battle_spirit.gd" id="3_q6q0e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nyjef"]
+size = Vector2(74, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ppo2p"]
+size = Vector2(97, 67)
+
+[node name="Node2D" type="Node2D" unique_id=633884670]
+
+[node name="battle_spirit" type="CharacterBody2D" parent="." unique_id=1194931006]
+script = ExtResource("3_q6q0e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="battle_spirit" unique_id=278753367]
+sprite_frames = ExtResource("1_55ewd")
+animation = &"idle"
+
+[node name="FxSprite" type="Sprite2D" parent="battle_spirit" unique_id=509192657]
+visible = false
+position = Vector2(-93, 28)
+texture = ExtResource("2_ppo2p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="battle_spirit" unique_id=681631631]
+position = Vector2(8, 18)
+shape = SubResource("RectangleShape2D_nyjef")
+
+[node name="Area2D" type="Area2D" parent="battle_spirit" unique_id=1361400548]
+position = Vector2(-17, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="battle_spirit/Area2D" unique_id=266819456]
+position = Vector2(22.5, 0)
+shape = SubResource("RectangleShape2D_ppo2p")

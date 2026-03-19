@@ -1,0 +1,240 @@
+{
+  "element": "fire",
+  "skills": [
+	{
+	  "id": "skill_002",
+	  "name": "火星弹",
+	  "element": "fire",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 8,
+	  "cooldown": 2.5,
+	  "cast_time": 0.25,
+	  "range_type": "projectile",
+	  "target_type": "enemy",
+	  "power": 20,
+	  "desc": "发射一枚小型灵火弹攻击敌人。",
+	  "tags": ["projectile", "fire"],
+	  "effect": {
+		"type": "single_projectile",
+		"params": {
+		  "projectile_speed": 11.0,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_007",
+	  "name": "青灯火苗",
+	  "element": "fire",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 10,
+	  "cooldown": 3.0,
+	  "cast_time": 0.3,
+	  "range_type": "projectile",
+	  "target_type": "enemy",
+	  "power": 22,
+	  "desc": "释放一团青色灯火，命中有概率灼烧。",
+	  "tags": ["projectile", "burn"],
+	  "effect": {
+		"type": "single_projectile_apply_state",
+		"params": {
+		  "projectile_speed": 10.0,
+		  "state": "burn",
+		  "chance": 0.25,
+		  "duration": 3.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_008",
+	  "name": "赤焰砸落",
+	  "element": "fire",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 14,
+	  "cooldown": 5.5,
+	  "cast_time": 0.45,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 34,
+	  "desc": "凝聚赤焰砸向前方地面，造成范围伤害。",
+	  "tags": ["aoe", "fire", "impact"],
+	  "effect": {
+		"type": "ground_aoe",
+		"params": {
+		  "radius": 2.2,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_016",
+	  "name": "青烛环焰",
+	  "element": "fire",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 16,
+	  "cooldown": 7.5,
+	  "cast_time": 0.35,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 30,
+	  "desc": "以自身为中心释放青色火环。",
+	  "tags": ["aoe", "fire", "burn"],
+	  "effect": {
+		"type": "self_center_aoe_apply_state",
+		"params": {
+		  "radius": 2.5,
+		  "state": "burn",
+		  "chance": 0.35,
+		  "duration": 4.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_017",
+	  "name": "赤炬投掷",
+	  "element": "fire",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 15,
+	  "cooldown": 5.0,
+	  "cast_time": 0.3,
+	  "range_type": "projectile",
+	  "target_type": "enemy",
+	  "power": 32,
+	  "desc": "投掷燃烧的赤炬，对命中点造成爆裂伤害。",
+	  "tags": ["projectile", "explosion", "fire"],
+	  "effect": {
+		"type": "projectile_explosion",
+		"params": {
+		  "projectile_speed": 9.0,
+		  "radius": 2.0,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_022",
+	  "name": "青焰穿心",
+	  "element": "fire",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 18,
+	  "cooldown": 6.8,
+	  "cast_time": 0.32,
+	  "range_type": "projectile",
+	  "target_type": "enemy",
+	  "power": 36,
+	  "desc": "释放高速穿透型青焰直线攻击。",
+	  "tags": ["projectile", "pierce", "fire"],
+	  "effect": {
+		"type": "piercing_projectile",
+		"params": {
+		  "projectile_speed": 15.0,
+		  "max_targets": 3
+		}
+	  }
+	},
+	{
+	  "id": "skill_023",
+	  "name": "赤焰护体",
+	  "element": "fire",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 14,
+	  "cooldown": 9.0,
+	  "cast_time": 0.25,
+	  "range_type": "self",
+	  "target_type": "self",
+	  "power": 0,
+	  "desc": "短时间内提升火属性伤害与抗性。",
+	  "tags": ["buff", "fire"],
+	  "effect": {
+		"type": "self_buff",
+		"params": {
+		  "buff": {
+			"fire_damage_up": 0.15,
+			"fire_res_up": 0.2
+		  },
+		  "duration": 6.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_030",
+	  "name": "赤炬爆燃",
+	  "element": "fire",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 22,
+	  "cooldown": 9.5,
+	  "cast_time": 0.5,
+	  "range_type": "aoe",
+	  "target_type": "enemy",
+	  "power": 45,
+	  "desc": "引爆前方区域的赤色灵焰。",
+	  "tags": ["aoe", "explosion", "burn"],
+	  "effect": {
+		"type": "target_area_explosion",
+		"params": {
+		  "radius": 2.8,
+		  "state": "burn",
+		  "chance": 0.45,
+		  "duration": 4.0
+		}
+	  }
+	},
+	{
+	  "id": "skill_038",
+	  "name": "炬火横扫",
+	  "element": "fire",
+	  "category": "主动技能",
+	  "learn_type": "level",
+	  "mp_cost": 18,
+	  "cooldown": 6.0,
+	  "cast_time": 0.2,
+	  "range_type": "melee",
+	  "target_type": "enemy",
+	  "power": 37,
+	  "desc": "挥舞火焰武器横扫前方。",
+	  "tags": ["melee", "aoe", "fire"],
+	  "effect": {
+		"type": "front_arc_attack",
+		"params": {
+		  "arc": 120,
+		  "range": 2.8,
+		  "hit_count": 1
+		}
+	  }
+	},
+	{
+	  "id": "skill_045",
+	  "name": "圣炬临身",
+	  "element": "fire",
+	  "category": "必杀",
+	  "learn_type": "level",
+	  "mp_cost": 30,
+	  "cooldown": 18.0,
+	  "cast_time": 0.65,
+	  "range_type": "self",
+	  "target_type": "self",
+	  "power": 0,
+	  "desc": "引圣炬之力附体，显著提升攻击与火伤。",
+	  "tags": ["ultimate", "buff", "fire"],
+	  "effect": {
+		"type": "self_buff",
+		"params": {
+		  "buff": {
+			"atk": 0.2,
+			"mag": 0.2,
+			"fire_damage_up": 0.25
+		  },
+		  "duration": 10.0
+		}
+	  }
+	}
+  ]
+}
