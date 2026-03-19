@@ -19,7 +19,7 @@ shape = SubResource("RectangleShape2D_nvj88")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=587907285]
 texture_filter = 1
 sprite_frames = ExtResource("1_nvj88")
-animation = &"jump_right"
+animation = &"idle_right"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=813583170]
 

@@ -17,7 +17,7 @@ script = ExtResource("3_q6q0e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="battle_spirit" unique_id=278753367]
 sprite_frames = ExtResource("1_55ewd")
-animation = &"idle"
+animation = &"walk"
 
 [node name="FxSprite" type="Sprite2D" parent="battle_spirit" unique_id=509192657]
 visible = false
