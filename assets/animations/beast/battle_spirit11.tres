@@ -5,11 +5,11 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yv7s5"]
 atlas = ExtResource("1_evdrs")
-region = Rect2(200, 600, 200, 200)
+region = Rect2(400, 600, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ki0ft"]
 atlas = ExtResource("1_evdrs")
-region = Rect2(0, 600, 200, 200)
+region = Rect2(600, 600, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lqda1"]
 atlas = ExtResource("1_evdrs")

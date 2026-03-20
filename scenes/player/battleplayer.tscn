@@ -7,7 +7,10 @@
 size = Vector2(88, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4oxn"]
-size = Vector2(67, 68.5)
+size = Vector2(114.5, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0q1r"]
+size = Vector2(122, 86)
 
 [node name="battlep" type="CharacterBody2D" unique_id=941227138]
 script = ExtResource("2_sq3tm")
@@ -24,7 +27,16 @@ animation = &"idle_right"
 [node name="Area2D" type="Area2D" parent="." unique_id=813583170]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1175349795]
-position = Vector2(-1, 79.25)
+position = Vector2(22.75, 24)
 shape = SubResource("RectangleShape2D_i4oxn")
+
+[node name="AttackArea2D" type="Area2D" parent="."]
+visible = false
+position = Vector2(96, 86)
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
+shape = SubResource("RectangleShape2D_t0q1r")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1871045286]

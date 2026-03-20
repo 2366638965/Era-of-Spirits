@@ -9,6 +9,8 @@ extends CharacterBody2D
 @export var jump_forward_speed_walk: float = 220.0
 @export var jump_forward_speed_run: float = 300.0
 @export var attack_duration: float = 0.45
+@export var attack_area_offset_x: float = 96.0
+@export var attack_area_offset_y: float = 86.0
 @export var run_modifier_actions: PackedStringArray = PackedStringArray(["run_modifier", "run", "sprint", "switch_control"])
 @export var edge_rebound_enabled: bool = true
 @export var edge_rebound_speed: float = 120.0
@@ -18,6 +20,7 @@ extends CharacterBody2D
 @onready var _animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var _camera: Camera2D = $Camera2D
 @onready var _sensor_area: Area2D = $Area2D
+@onready var _attack_area: Area2D = $AttackArea2D
 @onready var _body_collision_shape: CollisionShape2D = $CollisionShape2D
 
 const BattlePlayerInputModule = preload("res://scripts/player/modules/battle_player_input_module.gd")
@@ -36,6 +39,7 @@ var _jump_elapsed_time: float = 0.0
 var _jump_move_velocity: Vector2 = Vector2.ZERO
 var _attack_time_left: float = 0.0
 var _attack_chain_requested: bool = false
+var _attack_sequence: int = 0
 var _sprite_ground_position: Vector2 = Vector2.ZERO
 
 var _middle_wall_area: Area2D
@@ -70,6 +74,11 @@ func _ready() -> void:
 		_camera.make_current()
 	if _animated_sprite != null:
 		_sprite_ground_position = _animated_sprite.position
+	if _sensor_area != null:
+		_sensor_area.monitoring = true
+		_sensor_area.monitorable = true
+	_set_attack_area_active(false)
+	_sync_attack_area_transform()
 
 	_resolve_battle_nodes()
 	_refresh_wall_limits()
@@ -105,6 +114,7 @@ func _physics_process(delta: float) -> void:
 		_facing_left = true
 	elif direction.x > 0.0:
 		_facing_left = false
+	_sync_attack_area_transform()
 
 	direction = _apply_middle_wall_block(direction)
 
@@ -133,6 +143,7 @@ func _physics_process(delta: float) -> void:
 
 func _exit_tree() -> void:
 	_set_middle_wall_collision_enabled(true)
+	_set_attack_area_active(false)
 
 
 func _resolve_priority_move_input(delta: float) -> Dictionary:
@@ -154,6 +165,7 @@ func _tick_action_timers(delta: float) -> void:
 				_is_attacking = false
 				_attack_time_left = 0.0
 				_attack_chain_requested = false
+				_set_attack_area_active(false)
 
 	if _is_jumping:
 		_jump_elapsed_time += delta
@@ -177,6 +189,8 @@ func _start_attack() -> void:
 	_is_attacking = true
 	_attack_time_left = maxf(attack_duration, 0.05)
 	_attack_chain_requested = false
+	_attack_sequence += 1
+	_set_attack_area_active(true)
 
 
 func _handle_attack_input() -> void:
@@ -209,6 +223,7 @@ func _start_jump(input_direction: Vector2, input_should_run: bool) -> void:
 		var jump_speed: float = jump_forward_speed_run if input_should_run else jump_forward_speed_walk
 		_jump_move_velocity = input_direction.normalized() * jump_speed
 	_attack_chain_requested = false
+	_set_attack_area_active(false)
 	_edge_rebound_velocity = Vector2.ZERO
 	_edge_rebound_time_left = 0.0
 	_update_jump_arc_visual()
@@ -357,3 +372,31 @@ func _set_middle_wall_collision_enabled(enabled: bool) -> void:
 	if _middle_wall_shape == null:
 		return
 	_middle_wall_shape.disabled = not enabled
+
+
+func is_attack_active() -> bool:
+	return _is_attacking and not _is_jumping
+
+
+func get_attack_sequence() -> int:
+	return _attack_sequence
+
+
+func get_attack_area() -> Area2D:
+	return _attack_area
+
+
+func _set_attack_area_active(active: bool) -> void:
+	if _attack_area == null:
+		return
+	_attack_area.visible = active
+	_attack_area.monitoring = active
+	_attack_area.monitorable = active
+
+
+func _sync_attack_area_transform() -> void:
+	if _attack_area == null:
+		return
+	var x_abs: float = absf(attack_area_offset_x)
+	_attack_area.position.x = -x_abs if _facing_left else x_abs
+	_attack_area.position.y = attack_area_offset_y

@@ -1,114 +1,611 @@
 {
   "element_relations": {
-	"wood": {
-	  "wood": {
+	"metal": {
+	  "metal": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
 	  },
-	  "earth": {
+	  "wood": {
 		"multiplier": 1.25,
-		"tag": "克制"
+		"tag": "strong"
+	  },
+	  "water": {
+		"multiplier": 1.0,
+		"tag": "normal"
 	  },
 	  "fire": {
 		"multiplier": 0.85,
-		"tag": "被克"
+		"tag": "weak"
+	  },
+	  "earth": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "wind": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "spirit": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "thunder": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "ice": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  },
+	  "light": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "dark": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "poison": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  }
+	},
+	"wood": {
+	  "metal": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "wood": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "water": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  },
+	  "fire": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "earth": {
+		"multiplier": 1.25,
+		"tag": "strong"
 	  },
 	  "wind": {
 		"multiplier": 0.9,
-		"tag": "被克"
+		"tag": "weak"
 	  },
 	  "spirit": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
+	  },
+	  "thunder": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "ice": {
+		"multiplier": 0.9,
+		"tag": "weak"
+	  },
+	  "light": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "dark": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "poison": {
+		"multiplier": 0.9,
+		"tag": "weak"
 	  }
 	},
-	"earth": {
-	  "wood": {
-		"multiplier": 0.85,
-		"tag": "被克"
-	  },
-	  "earth": {
+	"water": {
+	  "metal": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
+	  },
+	  "wood": {
+		"multiplier": 0.9,
+		"tag": "weak"
+	  },
+	  "water": {
+		"multiplier": 1.0,
+		"tag": "normal"
 	  },
 	  "fire": {
 		"multiplier": 1.25,
-		"tag": "克制"
+		"tag": "strong"
+	  },
+	  "earth": {
+		"multiplier": 0.85,
+		"tag": "weak"
 	  },
 	  "wind": {
-		"multiplier": 1.15,
-		"tag": "克制"
+		"multiplier": 1.0,
+		"tag": "normal"
 	  },
 	  "spirit": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
+	  },
+	  "thunder": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "ice": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "light": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "dark": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "poison": {
+		"multiplier": 1.15,
+		"tag": "strong"
 	  }
 	},
 	"fire": {
-	  "wood": {
+	  "metal": {
 		"multiplier": 1.25,
-		"tag": "克制"
+		"tag": "strong"
 	  },
-	  "earth": {
+	  "wood": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  },
+	  "water": {
 		"multiplier": 0.85,
-		"tag": "被克"
+		"tag": "weak"
 	  },
 	  "fire": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
+	  },
+	  "earth": {
+		"multiplier": 0.9,
+		"tag": "weak"
 	  },
 	  "wind": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
 	  },
 	  "spirit": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
+	  },
+	  "thunder": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "ice": {
+		"multiplier": 1.25,
+		"tag": "strong"
+	  },
+	  "light": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "dark": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "poison": {
+		"multiplier": 1.1,
+		"tag": "strong"
+	  }
+	},
+	"earth": {
+	  "metal": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "wood": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "water": {
+		"multiplier": 1.25,
+		"tag": "strong"
+	  },
+	  "fire": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  },
+	  "earth": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "wind": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  },
+	  "spirit": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "thunder": {
+		"multiplier": 1.1,
+		"tag": "strong"
+	  },
+	  "ice": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "light": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "dark": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "poison": {
+		"multiplier": 1.15,
+		"tag": "strong"
 	  }
 	},
 	"wind": {
+	  "metal": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
 	  "wood": {
 		"multiplier": 1.25,
-		"tag": "克制"
+		"tag": "strong"
+	  },
+	  "water": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "fire": {
+		"multiplier": 1.0,
+		"tag": "normal"
 	  },
 	  "earth": {
 		"multiplier": 0.85,
-		"tag": "被克"
-	  },
-	  "fire": {
-		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "weak"
 	  },
 	  "wind": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
 	  },
 	  "spirit": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
+	  },
+	  "thunder": {
+		"multiplier": 0.9,
+		"tag": "weak"
+	  },
+	  "ice": {
+		"multiplier": 0.9,
+		"tag": "weak"
+	  },
+	  "light": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "dark": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "poison": {
+		"multiplier": 1.0,
+		"tag": "normal"
 	  }
 	},
 	"spirit": {
+	  "metal": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
 	  "wood": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
 	  },
-	  "earth": {
+	  "water": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
 	  },
 	  "fire": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
+	  },
+	  "earth": {
+		"multiplier": 1.0,
+		"tag": "normal"
 	  },
 	  "wind": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
 	  },
 	  "spirit": {
 		"multiplier": 1.0,
-		"tag": "普通"
+		"tag": "normal"
+	  },
+	  "thunder": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "ice": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "light": {
+		"multiplier": 1.05,
+		"tag": "strong"
+	  },
+	  "dark": {
+		"multiplier": 1.05,
+		"tag": "strong"
+	  },
+	  "poison": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  }
+	},
+	"thunder": {
+	  "metal": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "wood": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "water": {
+		"multiplier": 1.25,
+		"tag": "strong"
+	  },
+	  "fire": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "earth": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "wind": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  },
+	  "spirit": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "thunder": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "ice": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  },
+	  "light": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "dark": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "poison": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  }
+	},
+	"ice": {
+	  "metal": {
+		"multiplier": 0.9,
+		"tag": "weak"
+	  },
+	  "wood": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  },
+	  "water": {
+		"multiplier": 0.9,
+		"tag": "weak"
+	  },
+	  "fire": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "earth": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "wind": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  },
+	  "spirit": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "thunder": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "ice": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "light": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "dark": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "poison": {
+		"multiplier": 1.1,
+		"tag": "strong"
+	  }
+	},
+	"light": {
+	  "metal": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "wood": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "water": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "fire": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "earth": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "wind": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "spirit": {
+		"multiplier": 1.05,
+		"tag": "strong"
+	  },
+	  "thunder": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "ice": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "light": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "dark": {
+		"multiplier": 1.25,
+		"tag": "strong"
+	  },
+	  "poison": {
+		"multiplier": 1.1,
+		"tag": "strong"
+	  }
+	},
+	"dark": {
+	  "metal": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "wood": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "water": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "fire": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "earth": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "wind": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "spirit": {
+		"multiplier": 1.05,
+		"tag": "strong"
+	  },
+	  "thunder": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "ice": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "light": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "dark": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "poison": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  }
+	},
+	"poison": {
+	  "metal": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "wood": {
+		"multiplier": 1.15,
+		"tag": "strong"
+	  },
+	  "water": {
+		"multiplier": 0.9,
+		"tag": "weak"
+	  },
+	  "fire": {
+		"multiplier": 0.9,
+		"tag": "weak"
+	  },
+	  "earth": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "wind": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "spirit": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "thunder": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "ice": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "light": {
+		"multiplier": 0.85,
+		"tag": "weak"
+	  },
+	  "dark": {
+		"multiplier": 1.0,
+		"tag": "normal"
+	  },
+	  "poison": {
+		"multiplier": 1.0,
+		"tag": "normal"
 	  }
 	}
+  },
+"relation_tags": {
+	"strong": "克制",
+	"weak": "抵抗",
+	"normal": "普通",
+	"immune": "免疫",
+	"absorb": "吸收"
   }
 }

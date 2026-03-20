@@ -5,10 +5,13 @@
 [ext_resource type="Script" uid="uid://dcgk4wcoj355i" path="res://scripts/beast/battle_spirit.gd" id="3_q6q0e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nyjef"]
-size = Vector2(74, 57)
+size = Vector2(85, 57)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppo2p"]
-size = Vector2(97, 67)
+size = Vector2(90.5, 80.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4b5a"]
+size = Vector2(108, 72)
 
 [node name="Node2D" type="Node2D" unique_id=633884670]
 
@@ -23,14 +26,24 @@ animation = &"walk"
 visible = false
 position = Vector2(-93, 28)
 texture = ExtResource("2_ppo2p")
+flip_h = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="battle_spirit" unique_id=681631631]
-position = Vector2(8, 18)
+position = Vector2(2.5, 18)
 shape = SubResource("RectangleShape2D_nyjef")
 
 [node name="Area2D" type="Area2D" parent="battle_spirit" unique_id=1361400548]
 position = Vector2(-17, 13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="battle_spirit/Area2D" unique_id=266819456]
-position = Vector2(22.5, 0)
+position = Vector2(33.75, 0.375)
 shape = SubResource("RectangleShape2D_ppo2p")
+
+[node name="AttackArea2D" type="Area2D" parent="battle_spirit"]
+visible = false
+position = Vector2(-92, 16)
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="battle_spirit/AttackArea2D"]
+shape = SubResource("RectangleShape2D_u4b5a")
