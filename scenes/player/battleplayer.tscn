@@ -30,13 +30,13 @@ animation = &"idle_right"
 position = Vector2(22.75, 24)
 shape = SubResource("RectangleShape2D_i4oxn")
 
-[node name="AttackArea2D" type="Area2D" parent="."]
+[node name="AttackArea2D" type="Area2D" parent="." unique_id=723435853]
 visible = false
 position = Vector2(96, 86)
 monitoring = false
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea2D" unique_id=266345213]
 shape = SubResource("RectangleShape2D_t0q1r")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1871045286]

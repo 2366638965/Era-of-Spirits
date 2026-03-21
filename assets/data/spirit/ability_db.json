@@ -1,0 +1,321 @@
+{
+  "version": "1.0.0",
+  "abilities": [
+    {
+      "id": "ability_001",
+      "legacy_ability_id": 201,
+      "name": {
+        "zh": "御金之躯",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["defense", "metal", "starter_line"],
+      "desc": "受到金属性伤害时，最终伤害降低10%。",
+      "effects": [
+        {
+          "type": "element_damage_taken_down",
+          "params": {
+            "element": "metal",
+            "value": 0.10
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 1
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_002",
+      "legacy_ability_id": 202,
+      "name": {
+        "zh": "护主本能",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["guard", "survival"],
+      "desc": "替主人承伤时，自身受到伤害降低12%。",
+      "effects": [
+        {
+          "type": "guard_damage_taken_down",
+          "params": {
+            "value": 0.12
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 2
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_003",
+      "legacy_ability_id": 203,
+      "name": {
+        "zh": "金纹灵压",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["offense", "metal"],
+      "desc": "金属性技能伤害提高12%。",
+      "effects": [
+        {
+          "type": "element_damage_up",
+          "params": {
+            "element": "metal",
+            "value": 0.12
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 3
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_004",
+      "legacy_ability_id": 204,
+      "name": {
+        "zh": "灵铠凝气",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["resource", "mp_regen"],
+      "desc": "MP自然回复速度提升18%。",
+      "effects": [
+        {
+          "type": "mp_regen_up",
+          "params": {
+            "value": 0.18
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 4
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_005",
+      "legacy_ability_id": 205,
+      "name": {
+        "zh": "赤金战魂",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["offense", "low_hp", "metal", "fire"],
+      "desc": "生命值低于50%时，攻击和法强提高15%。",
+      "effects": [
+        {
+          "type": "conditional_multi_stat_up",
+          "params": {
+            "condition": {
+              "hp_percent_lte": 0.5
+            },
+            "stats": {
+              "atk": 0.15,
+              "mag": 0.15
+            }
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 5
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_006",
+      "legacy_ability_id": 206,
+      "name": {
+        "zh": "焰金压制",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["state_synergy", "burn", "fire"],
+      "desc": "对灼烧目标伤害提高18%。",
+      "effects": [
+        {
+          "type": "bonus_damage_to_state_target",
+          "params": {
+            "target_state": "burn",
+            "value": 0.18
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 6
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_007",
+      "legacy_ability_id": 211,
+      "name": {
+        "zh": "灵犬感应",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["crit", "starter_line"],
+      "desc": "首次进入战斗后的8秒内，暴击率提升8%。",
+      "effects": [
+        {
+          "type": "battle_start_crit_rate_up",
+          "params": {
+            "value": 0.08,
+            "duration": 8.0
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 7
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_008",
+      "legacy_ability_id": 212,
+      "name": {
+        "zh": "金灵庇护",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["survive", "one_time"],
+      "desc": "首次受到致命伤害时保留1点生命，并获得2秒25%减伤。",
+      "effects": [
+        {
+          "type": "survive_lethal_once",
+          "params": {
+            "remain_hp": 1,
+            "buff": {
+              "damage_down": 0.25,
+              "duration": 2.0
+            }
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 8
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_009",
+      "legacy_ability_id": 213,
+      "name": {
+        "zh": "伏天前兆",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["evolution_hint", "metal", "fire"],
+      "desc": "释放必杀后10秒内，金与火属性伤害提高20%。",
+      "effects": [
+        {
+          "type": "after_ultimate_multi_element_damage_up",
+          "params": {
+            "elements": ["metal", "fire"],
+            "value": 0.20,
+            "duration": 10.0
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 9
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_010",
+      "legacy_ability_id": 214,
+      "name": {
+        "zh": "天曜神威",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["myth", "multi_element", "boss_aura"],
+      "desc": "金、火、光属性伤害提高15%。",
+      "effects": [
+        {
+          "type": "multi_element_damage_up",
+          "params": {
+            "elements": ["metal", "fire", "light"],
+            "value": 0.15
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 10
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_011",
+      "legacy_ability_id": 215,
+      "name": {
+        "zh": "神焰护体",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["myth", "burn_resist", "defense"],
+      "desc": "免疫灼烧，并使受到的持续伤害降低20%。",
+      "effects": [
+        {
+          "type": "state_immunity",
+          "params": {
+            "state": "burn"
+          }
+        },
+        {
+          "type": "dot_damage_taken_down",
+          "params": {
+            "value": 0.20
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 11
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_012",
+      "legacy_ability_id": 216,
+      "name": {
+        "zh": "伏天圣临",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["myth", "ultimate", "light", "fire"],
+      "desc": "释放终极技能后10秒内，自身造成伤害提高25%，并获得一次控制免疫。",
+      "effects": [
+        {
+          "type": "after_ultimate_damage_up",
+          "params": {
+            "value": 0.25,
+            "duration": 10.0
+          }
+        },
+        {
+          "type": "after_ultimate_gain_control_immunity_once",
+          "params": {}
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 12
+      },
+      "enabled": true
+    }
+  ]
+}

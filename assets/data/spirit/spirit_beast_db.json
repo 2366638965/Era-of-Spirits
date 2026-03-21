@@ -1,694 +1,253 @@
 {
+  "version": "1.0.0",
   "spirit_beasts": [
-	{
-	  "species_id": 0,
-	  "name": "苔团狸",
-	  "elements": ["wood", "earth"],
-	  "rarity": {
-		"tier": "普通",
-		"catch_rate": 0.42
-	  },
-	  "gender_rate": {
-		"male": 0.5,
-		"female": 0.5,
-		"unknown": 0.0
-	  },
-	  "abilities": {
-		"normal": ["ability_001", "ability_006"],
-		"hidden": ["ability_101"],
-		"default_active": "ability_001"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 105000,
-		"enemy_exp": 22
-	  },
-	  "base_stats": {
-		"hp": 62,
-		"mp": 28,
-		"atk": 36,
-		"def": 40,
-		"mag": 24,
-		"res": 32,
-		"spd": 41,
-		"agi": 47
-	  },
-	  "skills": [
-		{ "id": "skill_001", "unlock_level": 1 },
-		{ "id": "skill_004", "unlock_level": 4 },
-		{ "id": "skill_012", "unlock_level": 8 },
-		{ "id": "skill_018", "unlock_level": 12 }
-	  ],
-	  "evolution": {
-		"can_evolve": true,
-		"next_forms": [
-		  {
-			"target_species_id": 1,
-			"method": "等级进化",
-			"condition": {
-			  "level_gte": 16
-			}
-		  }
-		]
-	  }
-	},
-	{
-	  "species_id": 1,
-	  "name": "苔甲灵狸",
-	  "elements": ["wood", "earth"],
-	  "rarity": {
-		"tier": "稀有",
-		"catch_rate": 0.26
-	  },
-	  "gender_rate": {
-		"male": 0.5,
-		"female": 0.5,
-		"unknown": 0.0
-	  },
-	  "abilities": {
-		"normal": ["ability_002", "ability_007"],
-		"hidden": ["ability_102"],
-		"default_active": "ability_002"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 128000,
-		"enemy_exp": 41
-	  },
-	  "base_stats": {
-		"hp": 82,
-		"mp": 36,
-		"atk": 52,
-		"def": 65,
-		"mag": 30,
-		"res": 46,
-		"spd": 44,
-		"agi": 40
-	  },
-	  "skills": [
-		{ "id": "skill_004", "unlock_level": 1 },
-		{ "id": "skill_013", "unlock_level": 6 },
-		{ "id": "skill_019", "unlock_level": 12 },
-		{ "id": "skill_024", "unlock_level": 18 },
-		{ "id": "skill_033", "unlock_level": 24 }
-	  ],
-	  "evolution": {
-		"can_evolve": true,
-		"next_forms": [
-		  {
-			"target_species_id": 2,
-			"method": "等级进化",
-			"condition": {
-			  "level_gte": 32
-			}
-		  }
-		]
-	  }
-	},
-	{
-	  "species_id": 2,
-	  "name": "青藤迅狸",
-	  "elements": ["wood", "earth"],
-	  "rarity": {
-		"tier": "精英",
-		"catch_rate": 0.14
-	  },
-	  "gender_rate": {
-		"male": 0.5,
-		"female": 0.5,
-		"unknown": 0.0
-	  },
-	  "abilities": {
-		"normal": ["ability_003", "ability_008"],
-		"hidden": ["ability_103"],
-		"default_active": "ability_003"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 156000,
-		"enemy_exp": 68
-	  },
-	  "base_stats": {
-		"hp": 96,
-		"mp": 48,
-		"atk": 74,
-		"def": 58,
-		"mag": 42,
-		"res": 50,
-		"spd": 72,
-		"agi": 78
-	  },
-	  "skills": [
-		{ "id": "skill_012", "unlock_level": 1 },
-		{ "id": "skill_019", "unlock_level": 6 },
-		{ "id": "skill_025", "unlock_level": 12 },
-		{ "id": "skill_034", "unlock_level": 18 },
-		{ "id": "skill_041", "unlock_level": 26 },
-		{ "id": "skill_048", "unlock_level": 36 }
-	  ],
-	  "evolution": {
-		"can_evolve": false,
-		"next_forms": []
-	  }
-	},
-	{
-	  "species_id": 3,
-	  "name": "灯芽",
-	  "elements": ["fire", "spirit"],
-	  "rarity": {
-		"tier": "普通",
-		"catch_rate": 0.38
-	  },
-	  "gender_rate": {
-		"male": 0.0,
-		"female": 0.0,
-		"unknown": 1.0
-	  },
-	  "abilities": {
-		"normal": ["ability_009", "ability_010"],
-		"hidden": ["ability_104"],
-		"default_active": "ability_009"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 110000,
-		"enemy_exp": 24
-	  },
-	  "base_stats": {
-		"hp": 48,
-		"mp": 52,
-		"atk": 20,
-		"def": 26,
-		"mag": 46,
-		"res": 44,
-		"spd": 34,
-		"agi": 36
-	  },
-	  "skills": [
-		{ "id": "skill_002", "unlock_level": 1 },
-		{ "id": "skill_007", "unlock_level": 5 },
-		{ "id": "skill_015", "unlock_level": 10 },
-		{ "id": "skill_021", "unlock_level": 16 }
-	  ],
-	  "evolution": {
-		"can_evolve": true,
-		"next_forms": [
-		  {
-			"target_species_id": 4,
-			"method": "等级进化",
-			"condition": {
-			  "level_gte": 18
-			}
-		  }
-		]
-	  }
-	},
-	{
-	  "species_id": 4,
-	  "name": "青烛灯灵",
-	  "elements": ["fire", "spirit"],
-	  "rarity": {
-		"tier": "稀有",
-		"catch_rate": 0.22
-	  },
-	  "gender_rate": {
-		"male": 0.0,
-		"female": 0.3,
-		"unknown": 0.7
-	  },
-	  "abilities": {
-		"normal": ["ability_011", "ability_012"],
-		"hidden": ["ability_105"],
-		"default_active": "ability_011"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 136000,
-		"enemy_exp": 46
-	  },
-	  "base_stats": {
-		"hp": 63,
-		"mp": 78,
-		"atk": 28,
-		"def": 40,
-		"mag": 72,
-		"res": 66,
-		"spd": 42,
-		"agi": 39
-	  },
-	  "skills": [
-		{ "id": "skill_007", "unlock_level": 1 },
-		{ "id": "skill_016", "unlock_level": 8 },
-		{ "id": "skill_022", "unlock_level": 14 },
-		{ "id": "skill_029", "unlock_level": 22 },
-		{ "id": "skill_037", "unlock_level": 30 }
-	  ],
-	  "evolution": {
-		"can_evolve": true,
-		"next_forms": [
-		  {
-			"target_species_id": 5,
-			"method": "道具进化",
-			"condition": {
-			  "required_item": "item_red_flame_core"
-			}
-		  }
-		]
-	  }
-	},
-	{
-	  "species_id": 5,
-	  "name": "赤炬灯灵",
-	  "elements": ["fire", "spirit"],
-	  "rarity": {
-		"tier": "精英",
-		"catch_rate": 0.12
-	  },
-	  "gender_rate": {
-		"male": 0.4,
-		"female": 0.0,
-		"unknown": 0.6
-	  },
-	  "abilities": {
-		"normal": ["ability_013", "ability_014"],
-		"hidden": ["ability_106"],
-		"default_active": "ability_013"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 162000,
-		"enemy_exp": 72
-	  },
-	  "base_stats": {
-		"hp": 82,
-		"mp": 84,
-		"atk": 58,
-		"def": 52,
-		"mag": 76,
-		"res": 60,
-		"spd": 48,
-		"agi": 45
-	  },
-	  "skills": [
-		{ "id": "skill_008", "unlock_level": 1 },
-		{ "id": "skill_017", "unlock_level": 8 },
-		{ "id": "skill_023", "unlock_level": 14 },
-		{ "id": "skill_030", "unlock_level": 22 },
-		{ "id": "skill_038", "unlock_level": 30 },
-		{ "id": "skill_045", "unlock_level": 38 }
-	  ],
-	  "evolution": {
-		"can_evolve": false,
-		"next_forms": []
-	  }
-	},
-	{
-	  "species_id": 6,
-	  "name": "芽刃若螳",
-	  "elements": ["wood"],
-	  "rarity": {
-		"tier": "普通",
-		"catch_rate": 0.36
-	  },
-	  "gender_rate": {
-		"male": 0.5,
-		"female": 0.5,
-		"unknown": 0.0
-	  },
-	  "abilities": {
-		"normal": ["ability_015", "ability_016"],
-		"hidden": ["ability_107"],
-		"default_active": "ability_015"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 103000,
-		"enemy_exp": 21
-	  },
-	  "base_stats": {
-		"hp": 54,
-		"mp": 24,
-		"atk": 44,
-		"def": 28,
-		"mag": 20,
-		"res": 24,
-		"spd": 52,
-		"agi": 56
-	  },
-	  "skills": [
-		{ "id": "skill_003", "unlock_level": 1 },
-		{ "id": "skill_009", "unlock_level": 4 },
-		{ "id": "skill_014", "unlock_level": 9 },
-		{ "id": "skill_020", "unlock_level": 14 }
-	  ],
-	  "evolution": {
-		"can_evolve": true,
-		"next_forms": [
-		  {
-			"target_species_id": 7,
-			"method": "等级进化",
-			"condition": {
-			  "level_gte": 18
-			}
-		  }
-		]
-	  }
-	},
-	{
-	  "species_id": 7,
-	  "name": "叶刃游侠",
-	  "elements": ["wood", "wind"],
-	  "rarity": {
-		"tier": "稀有",
-		"catch_rate": 0.21
-	  },
-	  "gender_rate": {
-		"male": 0.5,
-		"female": 0.5,
-		"unknown": 0.0
-	  },
-	  "abilities": {
-		"normal": ["ability_017", "ability_018"],
-		"hidden": ["ability_108"],
-		"default_active": "ability_017"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 131000,
-		"enemy_exp": 43
-	  },
-	  "base_stats": {
-		"hp": 68,
-		"mp": 34,
-		"atk": 66,
-		"def": 40,
-		"mag": 28,
-		"res": 34,
-		"spd": 72,
-		"agi": 74
-	  },
-	  "skills": [
-		{ "id": "skill_009", "unlock_level": 1 },
-		{ "id": "skill_020", "unlock_level": 6 },
-		{ "id": "skill_026", "unlock_level": 12 },
-		{ "id": "skill_035", "unlock_level": 18 },
-		{ "id": "skill_042", "unlock_level": 26 }
-	  ],
-	  "evolution": {
-		"can_evolve": true,
-		"next_forms": [
-		  {
-			"target_species_id": 8,
-			"method": "技能进化",
-			"condition": {
-			  "level_gte": 34,
-			  "required_skill_id": "skill_035"
-			}
-		  }
-		]
-	  }
-	},
-	{
-	  "species_id": 8,
-	  "name": "叶翼镰王",
-	  "elements": ["wood", "wind"],
-	  "rarity": {
-		"tier": "精英",
-		"catch_rate": 0.1
-	  },
-	  "gender_rate": {
-		"male": 0.5,
-		"female": 0.5,
-		"unknown": 0.0
-	  },
-	  "abilities": {
-		"normal": ["ability_019", "ability_020"],
-		"hidden": ["ability_109"],
-		"default_active": "ability_019"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 168000,
-		"enemy_exp": 79
-	  },
-	  "base_stats": {
-		"hp": 86,
-		"mp": 42,
-		"atk": 92,
-		"def": 54,
-		"mag": 36,
-		"res": 42,
-		"spd": 88,
-		"agi": 90
-	  },
-	  "skills": [
-		{ "id": "skill_014", "unlock_level": 1 },
-		{ "id": "skill_027", "unlock_level": 8 },
-		{ "id": "skill_036", "unlock_level": 16 },
-		{ "id": "skill_043", "unlock_level": 24 },
-		{ "id": "skill_049", "unlock_level": 34 },
-		{ "id": "skill_053", "unlock_level": 42 }
-	  ],
-	  "evolution": {
-		"can_evolve": false,
-		"next_forms": []
-	  }
-	},
-	{
-	  "species_id": 9,
-	  "name": "云羽雀",
-	  "elements": ["wind"],
-	  "rarity": {
-		"tier": "普通",
-		"catch_rate": 0.4
-	  },
-	  "gender_rate": {
-		"male": 0.45,
-		"female": 0.45,
-		"unknown": 0.1
-	  },
-	  "abilities": {
-		"normal": ["ability_021", "ability_022"],
-		"hidden": ["ability_110"],
-		"default_active": "ability_021"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 100000,
-		"enemy_exp": 20
-	  },
-	  "base_stats": {
-		"hp": 46,
-		"mp": 30,
-		"atk": 30,
-		"def": 22,
-		"mag": 26,
-		"res": 28,
-		"spd": 62,
-		"agi": 68
-	  },
-	  "skills": [
-		{ "id": "skill_005", "unlock_level": 1 },
-		{ "id": "skill_010", "unlock_level": 5 },
-		{ "id": "skill_028", "unlock_level": 12 },
-		{ "id": "skill_039", "unlock_level": 18 }
-	  ],
-	  "evolution": {
-		"can_evolve": false,
-		"next_forms": []
-	  }
-	},
-	{
-	  "species_id": 10,
-	  "name": "岩角獒",
-	  "elements": ["earth"],
-	  "rarity": {
-		"tier": "稀有",
-		"catch_rate": 0.24
-	  },
-	  "gender_rate": {
-		"male": 0.55,
-		"female": 0.45,
-		"unknown": 0.0
-	  },
-	  "abilities": {
-		"normal": ["ability_023", "ability_024"],
-		"hidden": ["ability_111"],
-		"default_active": "ability_023"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 125000,
-		"enemy_exp": 39
-	  },
-	  "base_stats": {
-		"hp": 88,
-		"mp": 22,
-		"atk": 60,
-		"def": 70,
-		"mag": 18,
-		"res": 36,
-		"spd": 32,
-		"agi": 30
-	  },
-	  "skills": [
-		{ "id": "skill_006", "unlock_level": 1 },
-		{ "id": "skill_011", "unlock_level": 6 },
-		{ "id": "skill_031", "unlock_level": 12 },
-		{ "id": "skill_040", "unlock_level": 20 }
-	  ],
-	  "evolution": {
-		"can_evolve": false,
-		"next_forms": []
-	  }
-	},
-	{
-	  "species_id": 11,
-	  "name": "御灵犬",
-	  "elements": ["metal"],
-	  "rarity": {
-		"tier": "普通",
-		"catch_rate": 0.38
-	  },
-	  "gender_rate": {
-		"male": 0.55,
-		"female": 0.45,
-		"unknown": 0.0
-	  },
-	  "abilities": {
-		"normal": ["ability_201", "ability_202"],
-		"hidden": ["ability_211"],
-		"default_active": "ability_201"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 108000,
-		"enemy_exp": 24
-	  },
-	  "base_stats": {
-		"hp": 64,
-		"mp": 26,
-		"atk": 40,
-		"def": 38,
-		"mag": 24,
-		"res": 30,
-		"spd": 42,
-		"agi": 46
-	  },
-	  "skills": [
-		{ "id": "skill_201", "unlock_level": 1 },
-		{ "id": "skill_202", "unlock_level": 4 },
-		{ "id": "skill_203", "unlock_level": 8 },
-		{ "id": "skill_204", "unlock_level": 14 }
-	  ],
-	  "evolution": {
-		"can_evolve": true,
-		"next_forms": [
-		  {
-			"target_species_id": 12,
-			"method": "level",
-			"condition": {
-			  "level_gte": 18
-			}
-		  }
-		]
-	  }
-	},
-	{
-	  "species_id": 12,
-	  "name": "金灵犬",
-	  "elements": ["metal"],
-	  "rarity": {
-		"tier": "稀有",
-		"catch_rate": 0.24
-	  },
-	  "gender_rate": {
-		"male": 0.5,
-		"female": 0.5,
-		"unknown": 0.0
-	  },
-	  "abilities": {
-		"normal": ["ability_203", "ability_204"],
-		"hidden": ["ability_212"],
-		"default_active": "ability_203"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 122000,
-		"enemy_exp": 36
-	  },
-	  "base_stats": {
-		"hp": 58,
-		"mp": 40,
-		"atk": 34,
-		"def": 34,
-		"mag": 44,
-		"res": 40,
-		"spd": 40,
-		"agi": 44
-	  },
-	  "skills": [
-		{ "id": "skill_205", "unlock_level": 1 },
-		{ "id": "skill_206", "unlock_level": 5 },
-		{ "id": "skill_207", "unlock_level": 10 },
-		{ "id": "skill_208", "unlock_level": 16 }
-	  ],
-	  "evolution": {
-		"can_evolve": true,
-		"next_forms": [
-		  {
-			"target_species_id": 13,
-			"method": "level",
-			"condition": {
-			  "level_gte": 36
-			}
-		  }
-		]
-	  }
-	},
-	{
-	  "species_id": 13,
-	  "name": "赤金犬",
-	  "elements": ["metal"],
-	  "rarity": {
-		"tier": "精英",
-		"catch_rate": 0.14
-	  },
-	  "gender_rate": {
-		"male": 0.6,
-		"female": 0.4,
-		"unknown": 0.0
-	  },
-	  "abilities": {
-		"normal": ["ability_205", "ability_206"],
-		"hidden": ["ability_213"],
-		"default_active": "ability_205"
-	  },
-	  "growth": {
-		"max_level": 60,
-		"max_level_exp": 146000,
-		"enemy_exp": 58
-	  },
-	  "base_stats": {
-		"hp": 78,
-		"mp": 30,
-		"atk": 62,
-		"def": 48,
-		"mag": 28,
-		"res": 34,
-		"spd": 52,
-		"agi": 50
-	  },
-	  "skills": [
-		{ "id": "skill_209", "unlock_level": 1 },
-		{ "id": "skill_210", "unlock_level": 6 },
-		{ "id": "skill_211", "unlock_level": 12 },
-		{ "id": "skill_212", "unlock_level": 20 }
-	  ],
-	  "evolution": {
-		"can_evolve": false,
-		"next_forms": []
-	  }
-	}
+    {
+      "id": "beast_001",
+      "legacy_species_id": 1,
+      "name": {
+        "zh": "御灵犬",
+        "en": ""
+      },
+      "title": "御金灵犬",
+      "stage": 1,
+      "rarity": "common",
+      "race": "beast",
+      "elements": ["metal"],
+      "gender_rate": {
+        "male": 0.55,
+        "female": 0.45,
+        "unknown": 0.0
+      },
+      "capture": {
+        "base_rate": 0.38
+      },
+      "abilities": {
+        "normal": ["ability_001", "ability_002"],
+        "hidden": ["ability_007"],
+        "default_active": "ability_001"
+      },
+      "growth": {
+        "max_level": 60,
+        "max_level_exp": 108000,
+        "enemy_exp": 24
+      },
+      "base_stats": {
+        "hp": 64,
+        "mp": 26,
+        "atk": 40,
+        "def": 38,
+        "mag": 24,
+        "res": 30,
+        "spi": 28,
+        "agi": 46
+      },
+      "stage_unlock_skills": [
+        { "skill_id": "skill_001", "element": "metal" },
+        { "skill_id": "skill_002", "element": "metal" }
+      ],
+      "learnset": [
+        { "skill_id": "skill_001", "element": "metal", "unlock_level": 1 },
+        { "skill_id": "skill_002", "element": "metal", "unlock_level": 3 },
+        { "skill_id": "skill_003", "element": "metal", "unlock_level": 7 },
+        { "skill_id": "skill_004", "element": "metal", "unlock_level": 12 }
+      ],
+      "evolution_id": "evo_001",
+      "resources": {
+        "icon": "",
+        "portrait": "",
+        "battle_scene": "",
+        "world_scene": "",
+        "cry_sfx": ""
+      },
+      "tags": ["starter_line", "metal", "can_evolve", "dog"],
+      "desc": "与御灵人关系亲近的金属性犬类灵兽，成长稳定，适合作为初期培养对象。",
+      "enabled": true
+    },
+    {
+      "id": "beast_002",
+      "legacy_species_id": 2,
+      "name": {
+        "zh": "金灵犬",
+        "en": ""
+      },
+      "title": "金纹灵犬",
+      "stage": 2,
+      "rarity": "rare",
+      "race": "beast",
+      "elements": ["metal"],
+      "gender_rate": {
+        "male": 0.50,
+        "female": 0.50,
+        "unknown": 0.0
+      },
+      "capture": {
+        "base_rate": 0.24
+      },
+      "abilities": {
+        "normal": ["ability_003", "ability_004"],
+        "hidden": ["ability_008"],
+        "default_active": "ability_003"
+      },
+      "growth": {
+        "max_level": 60,
+        "max_level_exp": 122000,
+        "enemy_exp": 36
+      },
+      "base_stats": {
+        "hp": 76,
+        "mp": 34,
+        "atk": 54,
+        "def": 48,
+        "mag": 30,
+        "res": 36,
+        "spi": 36,
+        "agi": 50
+      },
+      "stage_unlock_skills": [
+        { "skill_id": "skill_005", "element": "metal" },
+        { "skill_id": "skill_006", "element": "metal" }
+      ],
+      "learnset": [
+        { "skill_id": "skill_005", "element": "metal", "unlock_level": 1 },
+        { "skill_id": "skill_006", "element": "metal", "unlock_level": 5 },
+        { "skill_id": "skill_007", "element": "metal", "unlock_level": 14 },
+        { "skill_id": "skill_008", "element": "metal", "unlock_level": 22 }
+      ],
+      "evolution_id": "evo_002",
+      "resources": {
+        "icon": "",
+        "portrait": "",
+        "battle_scene": "",
+        "world_scene": "",
+        "cry_sfx": ""
+      },
+      "tags": ["starter_line", "metal", "can_evolve", "dog"],
+      "desc": "御灵犬成长后的进化形态，毛发与骨甲出现金属性纹路，战斗风格更稳健。",
+      "enabled": true
+    },
+    {
+      "id": "beast_003",
+      "legacy_species_id": 3,
+      "name": {
+        "zh": "赤金犬",
+        "en": ""
+      },
+      "title": "赤焰金犬",
+      "stage": 3,
+      "rarity": "elite",
+      "race": "beast",
+      "elements": ["metal", "fire"],
+      "gender_rate": {
+        "male": 0.60,
+        "female": 0.40,
+        "unknown": 0.0
+      },
+      "capture": {
+        "base_rate": 0.14
+      },
+      "abilities": {
+        "normal": ["ability_005", "ability_006"],
+        "hidden": ["ability_009"],
+        "default_active": "ability_005"
+      },
+      "growth": {
+        "max_level": 60,
+        "max_level_exp": 146000,
+        "enemy_exp": 58
+      },
+      "base_stats": {
+        "hp": 96,
+        "mp": 44,
+        "atk": 76,
+        "def": 58,
+        "mag": 42,
+        "res": 44,
+        "spi": 48,
+        "agi": 58
+      },
+      "stage_unlock_skills": [
+        { "skill_id": "skill_009", "element": "metal" },
+        { "skill_id": "skill_010", "element": "fire" }
+      ],
+      "learnset": [
+        { "skill_id": "skill_009", "element": "metal", "unlock_level": 1 },
+        { "skill_id": "skill_010", "element": "fire", "unlock_level": 6 },
+        { "skill_id": "skill_011", "element": "fire", "unlock_level": 18 },
+        { "skill_id": "skill_012", "element": "fire", "unlock_level": 30 }
+      ],
+      "evolution_id": "evo_003",
+      "resources": {
+        "icon": "",
+        "portrait": "",
+        "battle_scene": "",
+        "world_scene": "",
+        "cry_sfx": ""
+      },
+      "tags": ["starter_line", "metal", "fire", "can_evolve", "dog"],
+      "desc": "金灵犬进一步蜕变后的强战斗形态，金属性之中融入赤焰气息，压制力显著增强。",
+      "enabled": true
+    },
+    {
+      "id": "beast_004",
+      "legacy_species_id": 4,
+      "name": {
+        "zh": "伏天",
+        "en": ""
+      },
+      "title": "赤曜天犬",
+      "stage": 4,
+      "rarity": "myth",
+      "race": "divine_beast",
+      "elements": ["metal", "fire", "light"],
+      "gender_rate": {
+        "male": 0.70,
+        "female": 0.30,
+        "unknown": 0.0
+      },
+      "capture": {
+        "base_rate": 0.0
+      },
+      "abilities": {
+        "normal": ["ability_010", "ability_011"],
+        "hidden": ["ability_012"],
+        "default_active": "ability_010"
+      },
+      "growth": {
+        "max_level": 80,
+        "max_level_exp": 260000,
+        "enemy_exp": 120
+      },
+      "base_stats": {
+        "hp": 132,
+        "mp": 72,
+        "atk": 104,
+        "def": 82,
+        "mag": 68,
+        "res": 76,
+        "spi": 82,
+        "agi": 72
+      },
+      "stage_unlock_skills": [
+        { "skill_id": "skill_013", "element": "light" },
+        { "skill_id": "skill_014", "element": "light" }
+      ],
+      "learnset": [
+        { "skill_id": "skill_013", "element": "light", "unlock_level": 1 },
+        { "skill_id": "skill_014", "element": "light", "unlock_level": 8 },
+        { "skill_id": "skill_015", "element": "fire", "unlock_level": 24 },
+        { "skill_id": "skill_016", "element": "light", "unlock_level": 40 }
+      ],
+      "evolution_id": null,
+      "resources": {
+        "icon": "",
+        "portrait": "",
+        "battle_scene": "",
+        "world_scene": "",
+        "cry_sfx": ""
+      },
+      "tags": ["starter_line", "final_stage", "myth", "metal", "fire", "light", "dog", "divine_beast"],
+      "desc": "赤金犬完成神话级蜕变后的最终形态，周身缠绕赤金流焰与神性辉光，具备强烈威压感。",
+      "enabled": true
+    }
   ]
 }

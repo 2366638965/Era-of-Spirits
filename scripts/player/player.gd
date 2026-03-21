@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@export var move_speed: float = 160.0
+@export var run_speed: float = 160.0
+@export var walk_speed: float = 90.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -21,6 +22,9 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	var direction: Vector2 = input_module.get_move_direction()
-	movement_module.move(self, direction, move_speed)
-	animation_module.update(direction)
+	var move_intent: Dictionary = input_module.get_move_intent()
+	var direction: Vector2 = move_intent.get("direction", Vector2.ZERO)
+	var is_running: bool = bool(move_intent.get("is_running", false))
+	var speed: float = run_speed if is_running else walk_speed
+	movement_module.move(self, direction, speed)
+	animation_module.update(direction, is_running)

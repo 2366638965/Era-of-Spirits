@@ -1,94 +1,74 @@
 {
+  "version": "1.0.0",
   "evolutions": [
-	{
-	  "id": "evo_000",
-	  "from_species_id": 0,
-	  "to_species_id": 1,
-	  "method": "level",
-	  "name_zh": "等级进化",
-	  "desc": "达到指定等级后自然进化。",
-	  "conditions": {
-		"level_gte": 16
-	  }
-	},
-	{
-	  "id": "evo_001",
-	  "from_species_id": 1,
-	  "to_species_id": 2,
-	  "method": "level",
-	  "name_zh": "等级进化",
-	  "desc": "达到指定等级后自然进化。",
-	  "conditions": {
-		"level_gte": 32
-	  }
-	},
-	{
-	  "id": "evo_002",
-	  "from_species_id": 3,
-	  "to_species_id": 4,
-	  "method": "level",
-	  "name_zh": "等级进化",
-	  "desc": "达到指定等级后自然进化。",
-	  "conditions": {
-		"level_gte": 18
-	  }
-	},
-	{
-	  "id": "evo_003",
-	  "from_species_id": 4,
-	  "to_species_id": 5,
-	  "method": "item",
-	  "name_zh": "道具进化",
-	  "desc": "使用特定进化材料完成进化。",
-	  "conditions": {
-		"required_item_id": "evo_fire",
-		"consume_item": true
-	  }
-	},
-	{
-	  "id": "evo_004",
-	  "from_species_id": 6,
-	  "to_species_id": 7,
-	  "method": "level",
-	  "name_zh": "等级进化",
-	  "desc": "达到指定等级后自然进化。",
-	  "conditions": {
-		"level_gte": 18
-	  }
-	},
-	{
-	  "id": "evo_005",
-	  "from_species_id": 7,
-	  "to_species_id": 8,
-	  "method": "skill",
-	  "name_zh": "技能进化",
-	  "desc": "达到等级并掌握指定技能后进化。",
-	  "conditions": {
-		"level_gte": 34,
-		"required_skill_id": "skill_035"
-	  }
-	},
-	{
-	  "id": "evo_011",
-	  "from_species_id": 11,
-	  "to_species_id": 12,
-	  "method": "level",
-	  "name_zh": "等级进化",
-	  "desc": "御灵犬成长到一定阶段后进化为金灵犬。",
-	  "conditions": {
-		"level_gte": 18
-	  }
-	},
-	{
-	  "id": "evo_012",
-	  "from_species_id": 12,
-	  "to_species_id": 13,
-	  "method": "level",
-	  "name_zh": "等级进化",
-	  "desc": "金灵犬成长到更高阶段后进化为赤金犬。",
-	  "conditions": {
-		"level_gte": 36
-	  }
-	}
+    {
+      "id": "evo_001",
+      "from_beast_id": "beast_001",
+      "legacy_from_species_id": 1,
+      "branches": [
+        {
+          "to_beast_id": "beast_002",
+          "legacy_to_species_id": 2,
+          "method": "level",
+          "name": {
+            "zh": "等级进化",
+            "en": ""
+          },
+          "desc": "御灵犬达到一定等级后自然成长进化为金灵犬。",
+          "conditions": {
+            "level_gte": 18
+          },
+          "unlock_skills_on_evolution": ["skill_005", "skill_006"]
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "id": "evo_002",
+      "from_beast_id": "beast_002",
+      "legacy_from_species_id": 2,
+      "branches": [
+        {
+          "to_beast_id": "beast_003",
+          "legacy_to_species_id": 3,
+          "method": "level",
+          "name": {
+            "zh": "等级进化",
+            "en": ""
+          },
+          "desc": "金灵犬成长到更高阶段后进化为赤金犬。",
+          "conditions": {
+            "level_gte": 36
+          },
+          "unlock_skills_on_evolution": ["skill_009", "skill_010"]
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "id": "evo_003",
+      "from_beast_id": "beast_003",
+      "legacy_from_species_id": 3,
+      "branches": [
+        {
+          "to_beast_id": "beast_004",
+          "legacy_to_species_id": 4,
+          "method": "special",
+          "name": {
+            "zh": "神话进化",
+            "en": ""
+          },
+          "desc": "赤金犬需达到高等级、足够亲密度，并消耗特定神话进化道具，才能进化为伏天。",
+          "conditions": {
+            "level_gte": 50,
+            "bond_gte": 90,
+            "required_item_id": "item_001",
+            "consume_item": true
+          },
+          "unlock_skills_on_evolution": ["skill_013", "skill_014"]
+        }
+      ],
+      "enabled": true
+    }
   ]
 }

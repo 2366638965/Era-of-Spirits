@@ -1,0 +1,306 @@
+{
+  "player_spells": [
+    {
+      "id": "spl_breath",
+      "name_zh": "归元吐纳",
+      "name_en": "Returning Breath",
+      "category": "cultivation_spell",
+      "skill_type": "spiritual",
+      "rarity": "common",
+      "learnable": true,
+      "learned_by_default": true,
+      "element": "spirit",
+      "cost": {
+        "resource": "",
+        "value": 0
+      },
+      "cooldown": 0.0,
+      "cast_time": 1.0,
+      "target_type": "self",
+      "range_type": "self",
+      "power": 0,
+      "desc": "修炼用吐纳术，可缓慢吸收周围灵气提升法修经验，也可快速恢复灵气和耐力。",
+      "bonus": {
+        "type": "none",
+        "params": {}
+      },
+      "effect": {
+        "type": "cultivate_and_recover",
+        "params": {
+          "gain_spiritual_exp": 2,
+          "recover_mp_ratio": 0.2,
+          "recover_stamina_ratio": 0.15
+        }
+      }
+    },
+    {
+      "id": "spl_guard",
+      "name_zh": "灵元护体",
+      "name_en": "Spirit Guard",
+      "category": "support_spell",
+      "skill_type": "spiritual",
+      "rarity": "common",
+      "learnable": true,
+      "learned_by_default": true,
+      "element": "spirit",
+      "cost": {
+        "resource": "mp",
+        "value": 14
+      },
+      "cooldown": 8.0,
+      "cast_time": 0.25,
+      "target_type": "self",
+      "range_type": "self",
+      "power": 0,
+      "desc": "在体表形成灵气护盾，抵挡部分伤害。",
+      "bonus": {
+        "type": "none",
+        "params": {}
+      },
+      "effect": {
+        "type": "self_barrier",
+        "params": {
+          "barrier_ratio": 0.18,
+          "duration": 5.0
+        }
+      }
+    },
+    {
+      "id": "spl_ling_contract",
+      "name_zh": "灵契",
+      "name_en": "Spirit Contract",
+      "category": "beast_spell",
+      "skill_type": "beast",
+      "rarity": "rare",
+      "learnable": true,
+      "learned_by_default": true,
+      "element": "spirit",
+      "cost": {
+        "resource": "mp",
+        "value": 20
+      },
+      "cooldown": 10.0,
+      "cast_time": 0.35,
+      "target_type": "enemy",
+      "range_type": "projectile",
+      "power": 8,
+      "desc": "释放灵气锁链束缚灵兽，并有一定几率直接收服。成功收服后占用御兽契约位。",
+      "bonus": {
+        "type": "none",
+        "params": {}
+      },
+      "effect": {
+        "type": "capture_by_skill",
+        "params": {
+          "projectile_speed": 9.0,
+          "apply_state": "bind",
+          "bind_duration": 2.0,
+          "capture_mode": "contract_slot",
+          "capture_rate_bonus": 0.12,
+          "use_contract_slot": true
+        }
+      }
+    },
+    {
+      "id": "spl_blood_contract",
+      "name_zh": "血契",
+      "name_en": "Blood Contract",
+      "category": "beast_spell",
+      "skill_type": "beast",
+      "rarity": "rare",
+      "learnable": true,
+      "learned_by_default": true,
+      "element": "spirit",
+      "cost": {
+        "resource": "hp",
+        "value": 18
+      },
+      "cooldown": 14.0,
+      "cast_time": 0.45,
+      "target_type": "enemy",
+      "range_type": "projectile",
+      "power": 10,
+      "desc": "消耗自身生命强行建立血契，收服成功率更高。成功收服后占用御兽契约位。",
+      "bonus": {
+        "type": "none",
+        "params": {}
+      },
+      "effect": {
+        "type": "capture_by_blood_contract",
+        "params": {
+          "projectile_speed": 8.5,
+          "apply_state": "bind",
+          "bind_duration": 2.5,
+          "capture_mode": "contract_slot",
+          "capture_rate_bonus": 0.25,
+          "use_contract_slot": true
+        }
+      }
+    },
+    {
+      "id": "spl_fireball",
+      "name_zh": "火球术",
+      "name_en": "Fireball",
+      "category": "element_spell",
+      "skill_type": "spiritual",
+      "rarity": "common",
+      "learnable": true,
+      "learned_by_default": true,
+      "element": "fire",
+      "cost": {
+        "resource": "mp",
+        "value": 12
+      },
+      "cooldown": 2.5,
+      "cast_time": 0.2,
+      "target_type": "enemy",
+      "range_type": "projectile",
+      "power": 24,
+      "desc": "凝聚火灵气形成火球攻击敌人。",
+      "bonus": {
+        "type": "none",
+        "params": {}
+      },
+      "effect": {
+        "type": "single_projectile_apply_state",
+        "params": {
+          "projectile_speed": 11.0,
+          "hit_count": 1,
+          "state": "burn",
+          "chance": 0.2,
+          "duration": 3.0
+        }
+      }
+    },
+    {
+      "id": "spl_water",
+      "name_zh": "水弹术",
+      "name_en": "Water Bullet",
+      "category": "element_spell",
+      "skill_type": "spiritual",
+      "rarity": "common",
+      "learnable": true,
+      "learned_by_default": true,
+      "element": "water",
+      "cost": {
+        "resource": "mp",
+        "value": 11
+      },
+      "cooldown": 2.3,
+      "cast_time": 0.18,
+      "target_type": "enemy",
+      "range_type": "projectile",
+      "power": 22,
+      "desc": "压缩水灵气形成高速水弹攻击目标。",
+      "bonus": {
+        "type": "none",
+        "params": {}
+      },
+      "effect": {
+        "type": "single_projectile",
+        "params": {
+          "projectile_speed": 13.0,
+          "hit_count": 1
+        }
+      }
+    },
+    {
+      "id": "spl_earth",
+      "name_zh": "土刺",
+      "name_en": "Earth Spike",
+      "category": "element_spell",
+      "skill_type": "spiritual",
+      "rarity": "common",
+      "learnable": true,
+      "learned_by_default": true,
+      "element": "earth",
+      "cost": {
+        "resource": "mp",
+        "value": 14
+      },
+      "cooldown": 4.0,
+      "cast_time": 0.28,
+      "target_type": "enemy",
+      "range_type": "ground",
+      "power": 26,
+      "desc": "从地面突起土刺攻击前方目标。",
+      "bonus": {
+        "type": "none",
+        "params": {}
+      },
+      "effect": {
+        "type": "ground_spike",
+        "params": {
+          "hit_count": 1,
+          "knockup_chance": 0.25
+        }
+      }
+    },
+    {
+      "id": "spl_wood_bind",
+      "name_zh": "木缚术",
+      "name_en": "Vine Bind",
+      "category": "element_spell",
+      "skill_type": "spiritual",
+      "rarity": "common",
+      "learnable": true,
+      "learned_by_default": true,
+      "element": "wood",
+      "cost": {
+        "resource": "mp",
+        "value": 15
+      },
+      "cooldown": 5.5,
+      "cast_time": 0.3,
+      "target_type": "enemy",
+      "range_type": "projectile",
+      "power": 12,
+      "desc": "召出木藤束缚目标，限制其行动。",
+      "bonus": {
+        "type": "none",
+        "params": {}
+      },
+      "effect": {
+        "type": "projectile_apply_state",
+        "params": {
+          "projectile_speed": 9.0,
+          "state": "bind",
+          "chance": 1.0,
+          "duration": 1.8
+        }
+      }
+    },
+    {
+      "id": "spl_metal",
+      "name_zh": "锋芒术",
+      "name_en": "Metal Edge",
+      "category": "element_spell",
+      "skill_type": "spiritual",
+      "rarity": "common",
+      "learnable": true,
+      "learned_by_default": true,
+      "element": "metal",
+      "cost": {
+        "resource": "mp",
+        "value": 13
+      },
+      "cooldown": 2.8,
+      "cast_time": 0.16,
+      "target_type": "enemy",
+      "range_type": "projectile",
+      "power": 25,
+      "desc": "凝聚金行锋芒形成锐利气刃切割敌人。",
+      "bonus": {
+        "type": "none",
+        "params": {}
+      },
+      "effect": {
+        "type": "piercing_projectile",
+        "params": {
+          "projectile_speed": 14.0,
+          "max_targets": 2
+        }
+      }
+    }
+  ]
+}

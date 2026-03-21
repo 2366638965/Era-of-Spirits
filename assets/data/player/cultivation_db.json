@@ -1,148 +1,458 @@
 {
   "cultivation_systems": {
 	"spiritual": [
-	  {
-		"realm_id": "qi_refining",
-		"name_zh": "练气",
-		"name_en": "Qi Refining",
-		"stage_max": 9,
-		"full_realm_exp": 900,
-		"growth_focus": ["mag", "res", "mp_max"],
-		"growth_bonus_per_stage": {
-		  "mag": 2,
-		  "res": 2,
-		  "mp_max": 8
-		},
-		"breakthrough_to": "foundation"
-	  },
-	  {
-		"realm_id": "foundation",
-		"name_zh": "筑基",
-		"name_en": "Foundation Establishment",
-		"stage_max": 9,
-		"full_realm_exp": 2400,
-		"growth_focus": ["mag", "res", "mp_max"],
-		"growth_bonus_per_stage": {
-		  "mag": 3,
-		  "res": 3,
-		  "mp_max": 12
-		},
-		"breakthrough_to": "gold_core"
-	  },
-	  {
-		"realm_id": "gold_core",
-		"name_zh": "金丹",
-		"name_en": "Golden Core",
-		"stage_max": 9,
-		"full_realm_exp": 5600,
-		"growth_focus": ["mag", "res", "mp_max"],
-		"growth_bonus_per_stage": {
-		  "mag": 5,
-		  "res": 4,
-		  "mp_max": 18
-		},
-		"breakthrough_to": "nascent_soul"
-	  },
-	  {
-		"realm_id": "nascent_soul",
-		"name_zh": "元婴",
-		"name_en": "Nascent Soul",
-		"stage_max": 9,
-		"full_realm_exp": 10800,
-		"growth_focus": ["mag", "res", "mp_max"],
-		"growth_bonus_per_stage": {
-		  "mag": 7,
-		  "res": 6,
-		  "mp_max": 25
-		},
-		"breakthrough_to": "divine_transformation"
-	  },
-	  {
-		"realm_id": "divine_transformation",
-		"name_zh": "化神",
-		"name_en": "Divine Transformation",
-		"stage_max": 9,
-		"full_realm_exp": 18000,
-		"growth_focus": ["mag", "res", "mp_max"],
-		"growth_bonus_per_stage": {
-		  "mag": 10,
-		  "res": 8,
-		  "mp_max": 35
-		},
-		"breakthrough_to": ""
-	  }
-	],
+    {
+      "id": "realm_001",
+      "system_type": "spiritual",
+      "major_realm": "qi_refining",
+      "name": {
+        "zh": "炼气",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 1000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_break_001"],
+        "required_conditions": ["spiritual_foundation_stable"]
+      },
+      "desc": "修行起步阶段，开始感知并吸纳天地灵气。",
+      "enabled": true
+    },
+    {
+      "id": "realm_002",
+      "system_type": "spiritual",
+      "major_realm": "foundation_building",
+      "name": {
+        "zh": "筑基",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 2000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_break_002"],
+        "required_conditions": ["foundation_completed"]
+      },
+      "desc": "灵基成形，真正踏入修士之路。",
+      "enabled": true
+    },
+    {
+      "id": "realm_003",
+      "system_type": "spiritual",
+      "major_realm": "gold_core",
+      "name": {
+        "zh": "金丹",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 4000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_break_003"],
+        "required_conditions": ["core_perfected"]
+      },
+      "desc": "凝丹于内，灵力循环自成体系。",
+      "enabled": true
+    },
+    {
+      "id": "realm_004",
+      "system_type": "spiritual",
+      "major_realm": "nascent_soul",
+      "name": {
+        "zh": "元婴",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 8000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_break_004"],
+        "required_conditions": ["nascent_soul_stable"]
+      },
+      "desc": "元婴成形，神识与灵术层次产生飞跃。",
+      "enabled": true
+    },
+    {
+      "id": "realm_005",
+      "system_type": "spiritual",
+      "major_realm": "spirit_transform",
+      "name": {
+        "zh": "化神",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 16000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_break_005"],
+        "required_conditions": ["dao_heart_stable"]
+      },
+      "desc": "神识化形，精神与术法迈入更高层次。",
+      "enabled": true
+    },
+    {
+      "id": "realm_006",
+      "system_type": "spiritual",
+      "major_realm": "void_return",
+      "name": {
+        "zh": "返虚",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 32000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_break_006"],
+        "required_conditions": ["void_return_perfected"]
+      },
+      "desc": "触及虚实转换，灵力本质发生质变。",
+      "enabled": true
+    },
+    {
+      "id": "realm_007",
+      "system_type": "spiritual",
+      "major_realm": "dao_union",
+      "name": {
+        "zh": "合道",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 64000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_break_007"],
+        "required_conditions": ["dao_union_completed"]
+      },
+      "desc": "与自身道途相合，术法开始体现法则威压。",
+      "enabled": true
+    },
+    {
+      "id": "realm_008",
+      "system_type": "spiritual",
+      "major_realm": "tribulation_crossing",
+      "name": {
+        "zh": "渡劫",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 128000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_break_008"],
+        "required_conditions": ["tribulation_survived"]
+      },
+      "desc": "承受天劫洗礼，迈向真正超脱凡躯的层次。",
+      "enabled": true
+    },
+    {
+      "id": "realm_009",
+      "system_type": "spiritual",
+      "major_realm": "ascension",
+      "name": {
+        "zh": "飞升",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 256000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_break_009"],
+        "required_conditions": ["ascension_completed"]
+      },
+      "desc": "飞升之境，超脱凡尘，踏入仙阶门槛。",
+      "enabled": true
+    }
+  ],
 	"body": [
-	  {
-		"realm_id": "body_tempering",
-		"name_zh": "炼体",
-		"name_en": "Body Tempering",
-		"stage_max": 9,
-		"full_realm_exp": 840,
-		"growth_focus": ["atk", "def", "stamina_max"],
-		"growth_bonus_per_stage": {
-		  "atk": 2,
-		  "def": 2,
-		  "stamina_max": 10
-		},
-		"breakthrough_to": "bone_forging"
-	  },
-	  {
-		"realm_id": "bone_forging",
-		"name_zh": "锻骨",
-		"name_en": "Bone Forging",
-		"stage_max": 9,
-		"full_realm_exp": 2200,
-		"growth_focus": ["atk", "def", "stamina_max"],
-		"growth_bonus_per_stage": {
-		  "atk": 3,
-		  "def": 3,
-		  "stamina_max": 14
-		},
-		"breakthrough_to": "meridian_opening"
-	  },
-	  {
-		"realm_id": "meridian_opening",
-		"name_zh": "通脉",
-		"name_en": "Meridian Opening",
-		"stage_max": 9,
-		"full_realm_exp": 5100,
-		"growth_focus": ["atk", "def", "stamina_max"],
-		"growth_bonus_per_stage": {
-		  "atk": 5,
-		  "def": 4,
-		  "stamina_max": 18
-		},
-		"breakthrough_to": "blood_moving"
-	  },
-	  {
-		"realm_id": "blood_moving",
-		"name_zh": "搬血",
-		"name_en": "Blood Moving",
-		"stage_max": 9,
-		"full_realm_exp": 9800,
-		"growth_focus": ["atk", "def", "stamina_max"],
-		"growth_bonus_per_stage": {
-		  "atk": 7,
-		  "def": 6,
-		  "stamina_max": 24
-		},
-		"breakthrough_to": "golden_body"
-	  },
-	  {
-		"realm_id": "golden_body",
-		"name_zh": "金身",
-		"name_en": "Golden Body",
-		"stage_max": 9,
-		"full_realm_exp": 16500,
-		"growth_focus": ["atk", "def", "stamina_max"],
-		"growth_bonus_per_stage": {
-		  "atk": 10,
-		  "def": 8,
-		  "stamina_max": 30
-		},
-		"breakthrough_to": ""
-	  }
-	]
+    {
+      "id": "body_realm_001",
+      "system_type": "body",
+      "major_realm": "body_tempering",
+      "name": {
+        "zh": "炼体",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 1000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_body_break_001"],
+        "required_conditions": ["body_foundation_stable"]
+      },
+      "desc": "淬炼皮肉筋骨，打下炼体体系的基础。",
+      "enabled": true
+    },
+    {
+      "id": "body_realm_002",
+      "system_type": "body",
+      "major_realm": "bone_forging",
+      "name": {
+        "zh": "锻骨",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 2000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_body_break_002"],
+        "required_conditions": ["bones_tempered"]
+      },
+      "desc": "锤炼骨骼与关节，使肉身承载力与硬度大幅提升。",
+      "enabled": true
+    },
+    {
+      "id": "body_realm_003",
+      "system_type": "body",
+      "major_realm": "viscera_refining",
+      "name": {
+        "zh": "炼脏",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 4000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_body_break_003"],
+        "required_conditions": ["viscera_refined"]
+      },
+      "desc": "淬炼五脏六腑，增强体力、恢复与生命根基。",
+      "enabled": true
+    },
+    {
+      "id": "body_realm_004",
+      "system_type": "body",
+      "major_realm": "marrow_cleansing",
+      "name": {
+        "zh": "洗髓",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 8000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_body_break_004"],
+        "required_conditions": ["marrow_purified"]
+      },
+      "desc": "由内而外洗练骨髓与经络，使肉身根骨进一步蜕变。",
+      "enabled": true
+    },
+    {
+      "id": "body_realm_005",
+      "system_type": "body",
+      "major_realm": "blood_exchange",
+      "name": {
+        "zh": "换血",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 16000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_body_break_005"],
+        "required_conditions": ["blood_qi_awakened"]
+      },
+      "desc": "以强盛血气替换凡血，肉身活性与爆发力显著增强。",
+      "enabled": true
+    },
+    {
+      "id": "body_realm_006",
+      "system_type": "body",
+      "major_realm": "golden_body",
+      "name": {
+        "zh": "金身",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 32000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_body_break_006"],
+        "required_conditions": ["golden_body_stable"]
+      },
+      "desc": "肉身宛如金铁，兼具强大防御与高强承压能力。",
+      "enabled": true
+    },
+    {
+      "id": "body_realm_007",
+      "system_type": "body",
+      "major_realm": "saint_body",
+      "name": {
+        "zh": "圣体",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 64000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_body_break_007"],
+        "required_conditions": ["saint_body_awakened"]
+      },
+      "desc": "肉身升华为圣体层次，拥有极强的恢复与压制能力。",
+      "enabled": true
+    },
+    {
+      "id": "body_realm_008",
+      "system_type": "body",
+      "major_realm": "heavenly_body",
+      "name": {
+        "zh": "天躯",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 128000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_body_break_008"],
+        "required_conditions": ["heavenly_body_formed"]
+      },
+      "desc": "天躯已成，肉身开始具备超越凡俗的承载与爆发上限。",
+      "enabled": true
+    },
+    {
+      "id": "body_realm_009",
+      "system_type": "body",
+      "major_realm": "immortal_body",
+      "name": {
+        "zh": "不灭体",
+        "en": ""
+      },
+      "total_stages": 10,
+      "stage_name_rule": {
+        "1_3": "初期",
+        "4_6": "中期",
+        "7_9": "后期",
+        "10": "圆满"
+      },
+      "total_exp": 256000,
+      "exp_curve": "linear",
+      "breakthrough_rule": {
+        "required_stage": 10,
+        "required_items": ["item_body_break_009"],
+        "required_conditions": ["immortal_body_completed"]
+      },
+      "desc": "炼体体系顶层境界之一，肉身近乎不灭，具备极端强悍的恢复与承载能力。",
+      "enabled": true
+    }
+  ]
   }
 }

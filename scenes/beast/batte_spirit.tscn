@@ -24,9 +24,9 @@ animation = &"walk"
 
 [node name="FxSprite" type="Sprite2D" parent="battle_spirit" unique_id=509192657]
 visible = false
-position = Vector2(-93, 28)
+position = Vector2(93, 28)
 texture = ExtResource("2_ppo2p")
-flip_h = false
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="battle_spirit" unique_id=681631631]
 position = Vector2(2.5, 18)
@@ -39,11 +39,11 @@ position = Vector2(-17, 13)
 position = Vector2(33.75, 0.375)
 shape = SubResource("RectangleShape2D_ppo2p")
 
-[node name="AttackArea2D" type="Area2D" parent="battle_spirit"]
+[node name="AttackArea2D" type="Area2D" parent="battle_spirit" unique_id=1152787082]
 visible = false
 position = Vector2(-92, 16)
 monitoring = false
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="battle_spirit/AttackArea2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="battle_spirit/AttackArea2D" unique_id=971246433]
 shape = SubResource("RectangleShape2D_u4b5a")

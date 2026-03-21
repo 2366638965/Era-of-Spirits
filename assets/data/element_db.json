@@ -1,0 +1,209 @@
+{
+  "version": "1.0.0",
+  "elements": [
+    {
+      "id": "metal",
+      "key": "metal",
+      "name": {
+        "zh": "金",
+        "en": "Metal"
+      },
+      "desc": "偏向锋锐、破甲、穿透与高爆发。",
+      "ui": {
+        "color": "#C9B36B",
+        "icon": "icon_element_metal",
+        "tag": "burst_break",
+        "order": 1
+      },
+      "combat_tags": ["burst", "break", "penetration"],
+      "enabled": true
+    },
+    {
+      "id": "wood",
+      "key": "wood",
+      "name": {
+        "zh": "木",
+        "en": "Wood"
+      },
+      "desc": "偏向生长、束缚、恢复与持续压制。",
+      "ui": {
+        "color": "#5FAF4B",
+        "icon": "icon_element_wood",
+        "tag": "control_dot",
+        "order": 2
+      },
+      "combat_tags": ["growth", "control", "recovery", "dot"],
+      "enabled": true
+    },
+    {
+      "id": "water",
+      "key": "water",
+      "name": {
+        "zh": "水",
+        "en": "Water"
+      },
+      "desc": "偏向流动、缓冲、恢复与持续消耗。",
+      "ui": {
+        "color": "#4A90E2",
+        "icon": "icon_element_water",
+        "tag": "sustain_control",
+        "order": 3
+      },
+      "combat_tags": ["sustain", "control", "recovery", "drain"],
+      "enabled": true
+    },
+    {
+      "id": "fire",
+      "key": "fire",
+      "name": {
+        "zh": "火",
+        "en": "Fire"
+      },
+      "desc": "偏向爆发、灼烧与持续伤害。",
+      "ui": {
+        "color": "#E2583E",
+        "icon": "icon_element_fire",
+        "tag": "burst_dot",
+        "order": 4
+      },
+      "combat_tags": ["burst", "burn", "dot"],
+      "enabled": true
+    },
+    {
+      "id": "earth",
+      "key": "earth",
+      "name": {
+        "zh": "土",
+        "en": "Earth"
+      },
+      "desc": "偏向防御、护盾、击退与稳固。",
+      "ui": {
+        "color": "#A97B50",
+        "icon": "icon_element_earth",
+        "tag": "tank_control",
+        "order": 5
+      },
+      "combat_tags": ["defense", "shield", "control", "tank"],
+      "enabled": true
+    },
+    {
+      "id": "wind",
+      "key": "wind",
+      "name": {
+        "zh": "风",
+        "en": "Wind"
+      },
+      "desc": "偏向速度、位移、连击与空战。",
+      "ui": {
+        "color": "#7CC7C9",
+        "icon": "icon_element_wind",
+        "tag": "speed_combo",
+        "order": 6
+      },
+      "combat_tags": ["speed", "movement", "combo", "air"],
+      "enabled": true
+    },
+    {
+      "id": "spirit",
+      "key": "spirit",
+      "name": {
+        "zh": "灵",
+        "en": "Spirit"
+      },
+      "desc": "偏向灵力、异常、辅助与特殊能量。",
+      "ui": {
+        "color": "#9B7BFF",
+        "icon": "icon_element_spirit",
+        "tag": "special_support",
+        "order": 7
+      },
+      "combat_tags": ["special", "status", "support", "energy"],
+      "enabled": true
+    },
+    {
+      "id": "thunder",
+      "key": "thunder",
+      "name": {
+        "zh": "雷",
+        "en": "Thunder"
+      },
+      "desc": "偏向瞬时爆发、麻痹与高频打击。",
+      "ui": {
+        "color": "#C7A4FF",
+        "icon": "icon_element_thunder",
+        "tag": "burst_control",
+        "order": 8
+      },
+      "combat_tags": ["burst", "paralysis", "multi_hit"],
+      "enabled": true
+    },
+    {
+      "id": "ice",
+      "key": "ice",
+      "name": {
+        "zh": "冰",
+        "en": "Ice"
+      },
+      "desc": "偏向冻结、减速与区域控制。",
+      "ui": {
+        "color": "#9ED8FF",
+        "icon": "icon_element_ice",
+        "tag": "freeze_control",
+        "order": 9
+      },
+      "combat_tags": ["freeze", "slow", "control", "area"],
+      "enabled": true
+    },
+    {
+      "id": "light",
+      "key": "light",
+      "name": {
+        "zh": "光",
+        "en": "Light"
+      },
+      "desc": "偏向净化、护佑、增幅与圣属性伤害。",
+      "ui": {
+        "color": "#F6E27A",
+        "icon": "icon_element_light",
+        "tag": "support_burst",
+        "order": 10
+      },
+      "combat_tags": ["purify", "support", "buff", "holy_burst"],
+      "enabled": true
+    },
+    {
+      "id": "dark",
+      "key": "dark",
+      "name": {
+        "zh": "暗",
+        "en": "Dark"
+      },
+      "desc": "偏向侵蚀、诅咒、偷取与负面状态。",
+      "ui": {
+        "color": "#5A5473",
+        "icon": "icon_element_dark",
+        "tag": "curse_dot",
+        "order": 11
+      },
+      "combat_tags": ["curse", "drain", "debuff", "dot"],
+      "enabled": true
+    },
+    {
+      "id": "poison",
+      "key": "poison",
+      "name": {
+        "zh": "毒",
+        "en": "Poison"
+      },
+      "desc": "偏向中毒、削弱与持续消耗。",
+      "ui": {
+        "color": "#6BAF5E",
+        "icon": "icon_element_poison",
+        "tag": "dot_debuff",
+        "order": 12
+      },
+      "combat_tags": ["poison", "debuff", "dot"],
+      "enabled": true
+    }
+  ]
+}

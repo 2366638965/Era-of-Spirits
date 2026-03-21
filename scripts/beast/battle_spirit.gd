@@ -195,9 +195,9 @@ func _sync_fx_transform() -> void:
 
 	var x_offset_abs: float = absf(fx_offset_x)
 	var sprite_is_flipped: bool = _animated_sprite.flip_h
-	_fx_sprite.flip_h = sprite_is_flipped
-	# Keep default side on negative X, and mirror to positive X when sprite flips.
-	_fx_sprite.position.x = x_offset_abs if sprite_is_flipped else -x_offset_abs
+	# Fx texture faces opposite to the body sprite by default.
+	_fx_sprite.flip_h = not sprite_is_flipped
+	_fx_sprite.position.x = -x_offset_abs if sprite_is_flipped else x_offset_abs
 	_fx_sprite.position.y = fx_offset_y
 	_sync_attack_area_transform()
 

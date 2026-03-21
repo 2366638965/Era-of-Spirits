@@ -1,0 +1,90 @@
+{
+  "version": "1.0.0",
+  "element": "light",
+  "skills": [
+    {
+      "id": "skill_013",
+      "name": "天曜圣爪",
+      "element": "light",
+      "skill_type": "active",
+      "skill_category": "physical",
+      "target_type": "single_enemy",
+      "power": 98,
+      "accuracy": 0.96,
+      "cost": {
+        "mp": 6,
+        "stamina": 14
+      },
+      "cooldown": 1,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["damage", "light_bonus"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "stage",
+        "value": 4
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "holy_claw"
+      },
+      "desc": "以光辉圣爪撕裂目标。"
+    },
+    {
+      "id": "skill_014",
+      "name": "伏天圣辉",
+      "element": "light",
+      "skill_type": "active",
+      "skill_category": "support",
+      "target_type": "self",
+      "power": 0,
+      "accuracy": 1.0,
+      "cost": {
+        "mp": 16,
+        "stamina": 0
+      },
+      "cooldown": 5,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["self_buff", "damage_up", "control_resist"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "stage",
+        "value": 4
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "divine_radiance"
+      },
+      "desc": "沐浴圣辉，提高自身输出并增强抗控能力。"
+    },
+    {
+      "id": "skill_016",
+      "name": "伏天神临",
+      "element": "light",
+      "skill_type": "active",
+      "skill_category": "special",
+      "target_type": "all_enemies",
+      "power": 156,
+      "accuracy": 0.92,
+      "cost": {
+        "mp": 32,
+        "stamina": 0
+      },
+      "cooldown": 8,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["ultimate", "aoe", "special_burst"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "level",
+        "value": 40
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "heaven_descend"
+      },
+      "desc": "伏天释放神话级圣光威压，对全体敌人造成毁灭性打击。"
+    }
+  ]
+}

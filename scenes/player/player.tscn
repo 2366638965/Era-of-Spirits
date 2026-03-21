@@ -3,26 +3,25 @@
 [ext_resource type="SpriteFrames" uid="uid://bbks2hsoj1yhn" path="res://assets/animations/player/player.tres" id="1_8afob"]
 [ext_resource type="Script" uid="uid://cs5fnn55uc57b" path="res://scripts/player/player.gd" id="2_q0a2k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8afob"]
-size = Vector2(27, 28.259254)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_dovo2"]
-radius = 12.0415945
+radius = 12.502317
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmlin"]
+size = Vector2(20, 33.61111)
 
 [node name="Player" type="CharacterBody2D" unique_id=1007376433]
 script = ExtResource("2_q0a2k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1698314870]
-position = Vector2(-0.5, 16.260006)
-scale = Vector2(1, 1.0800006)
-shape = SubResource("RectangleShape2D_8afob")
+position = Vector2(0, 22)
+scale = Vector2(0.862706, 0.5600019)
+shape = SubResource("CircleShape2D_dovo2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1801544869]
 texture_filter = 1
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.9, 0.9)
 sprite_frames = ExtResource("1_8afob")
 animation = &"idle_down"
-frame_progress = 0.2509542
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=551897001]
 zoom = Vector2(2, 2)
@@ -30,8 +29,8 @@ zoom = Vector2(2, 2)
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1225751746]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=953095905]
-position = Vector2(0, 28)
+position = Vector2(0, 11.1)
 scale = Vector2(1, 0.72)
-shape = SubResource("CircleShape2D_dovo2")
+shape = SubResource("RectangleShape2D_gmlin")
 
 [node name="InteractionRay" type="RayCast2D" parent="." unique_id=276152268]

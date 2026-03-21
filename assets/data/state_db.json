@@ -1,0 +1,816 @@
+{
+  "version": "1.0.0",
+  "abilities": [
+    {
+      "id": "ability_001",
+      "name": {
+        "zh": "苔皮",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["defense", "element_resist", "wood"],
+      "desc": "受到木属性伤害时，最终伤害降低10%。",
+      "effects": [
+        {
+          "type": "element_damage_taken_down",
+          "params": {
+            "element": "wood",
+            "value": 0.1
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 1
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_002",
+      "name": {
+        "zh": "厚甲苔躯",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["conditional", "defense"],
+      "desc": "生命值高于50%时，物理防御提升15%。",
+      "effects": [
+        {
+          "type": "conditional_stat_up",
+          "params": {
+            "condition": {
+              "hp_percent_gte": 0.5
+            },
+            "stat": "def",
+            "value": 0.15
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 2
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_003",
+      "name": {
+        "zh": "藤疾",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["cooldown", "dash", "mobility"],
+      "desc": "冲刺类技能冷却缩短15%。",
+      "effects": [
+        {
+          "type": "skill_tag_cooldown_down",
+          "params": {
+            "tag": "dash",
+            "value": 0.15
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 3
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_006",
+      "name": {
+        "zh": "落叶缓冲",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["defense", "impact_resist"],
+      "desc": "受到撞击类伤害时，最终伤害降低12%。",
+      "effects": [
+        {
+          "type": "special_damage_taken_down",
+          "params": {
+            "damage_type": "impact",
+            "value": 0.12
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 6
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_007",
+      "name": {
+        "zh": "反震苔甲",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["guard", "reflect", "counter"],
+      "desc": "格挡成功时，对近身敌人反弹攻击力20%的伤害。",
+      "effects": [
+        {
+          "type": "on_guard_reflect_damage",
+          "params": {
+            "value": 0.2
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 7
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_008",
+      "name": {
+        "zh": "缠行",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["state_synergy", "bind", "damage_up"],
+      "desc": "命中被束缚目标时，伤害提高15%。",
+      "effects": [
+        {
+          "type": "bonus_damage_to_state_target",
+          "params": {
+            "target_state": "bind",
+            "value": 0.15
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 8
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_009",
+      "name": {
+        "zh": "灵火微光",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["mp_regen", "resource"],
+      "desc": "MP自然回复速度提升20%。",
+      "effects": [
+        {
+          "type": "mp_regen_up",
+          "params": {
+            "value": 0.2
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 9
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_010",
+      "name": {
+        "zh": "魂焰",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["fire", "state_apply", "burn"],
+      "desc": "火属性技能有15%概率附加灼烧。",
+      "effects": [
+        {
+          "type": "on_element_skill_apply_state",
+          "params": {
+            "element": "fire",
+            "state": "burn",
+            "chance": 0.15
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 10
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_011",
+      "name": {
+        "zh": "青灯凝神",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["cast", "interrupt_resist"],
+      "desc": "施法时受到打断的概率降低25%。",
+      "effects": [
+        {
+          "type": "cast_interrupt_resist",
+          "params": {
+            "value": 0.25
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 11
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_012",
+      "name": {
+        "zh": "幽烛",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["conditional", "environment", "mag_damage"],
+      "desc": "夜晚、秘境或黑暗环境中，法术伤害提高12%。",
+      "effects": [
+        {
+          "type": "conditional_stat_up",
+          "params": {
+            "condition": {
+              "battle_env_in": ["夜晚", "秘境", "黑暗"]
+            },
+            "stat": "mag_damage",
+            "value": 0.12
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 12
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_013",
+      "name": {
+        "zh": "炬焰战意",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["conditional", "offense", "low_hp"],
+      "desc": "生命值低于50%时，攻击和法强提高12%。",
+      "effects": [
+        {
+          "type": "conditional_multi_stat_up",
+          "params": {
+            "condition": {
+              "hp_percent_lte": 0.5
+            },
+            "stats": {
+              "atk": 0.12,
+              "mag": 0.12
+            }
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 13
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_014",
+      "name": {
+        "zh": "烈光压制",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["state_synergy", "burn", "damage_up"],
+      "desc": "对灼烧目标伤害提高18%。",
+      "effects": [
+        {
+          "type": "bonus_damage_to_state_target",
+          "params": {
+            "target_state": "burn",
+            "value": 0.18
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 14
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_015",
+      "name": {
+        "zh": "刃肢",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["normal_attack", "damage_up"],
+      "desc": "普通攻击伤害提高10%。",
+      "effects": [
+        {
+          "type": "normal_attack_damage_up",
+          "params": {
+            "value": 0.1
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 15
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_016",
+      "name": {
+        "zh": "轻壳",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["tradeoff", "agility_up", "defense_down"],
+      "desc": "敏捷提升8%，但防御降低5%。",
+      "effects": [
+        {
+          "type": "trade_stat",
+          "params": {
+            "up": {
+              "agi": 0.08
+            },
+            "down": {
+              "def": 0.05
+            }
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 16
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_017",
+      "name": {
+        "zh": "游猎步法",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["back_attack", "damage_up"],
+      "desc": "背击时伤害提高20%。",
+      "effects": [
+        {
+          "type": "back_attack_damage_up",
+          "params": {
+            "value": 0.2
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 17
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_018",
+      "name": {
+        "zh": "叶幕回避",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["evasion", "survival"],
+      "desc": "闪避率提升10%。",
+      "effects": [
+        {
+          "type": "evasion_up",
+          "params": {
+            "value": 0.1
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 18
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_019",
+      "name": {
+        "zh": "镰翼王压",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["conditional", "damage_up", "target_hp"],
+      "desc": "对生命高于70%的敌人伤害提高15%。",
+      "effects": [
+        {
+          "type": "bonus_damage_by_target_hp",
+          "params": {
+            "condition": {
+              "target_hp_percent_gte": 0.7
+            },
+            "value": 0.15
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 19
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_020",
+      "name": {
+        "zh": "风裂连斩",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["combo", "damage_up", "stacking"],
+      "desc": "连续命中同一目标时，第三击起每次额外增伤5%，最高20%。",
+      "effects": [
+        {
+          "type": "combo_damage_up",
+          "params": {
+            "per_stack": 0.05,
+            "max": 0.2,
+            "start_hit": 3
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 20
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_021",
+      "name": {
+        "zh": "轻羽",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["air", "mobility", "jump"],
+      "desc": "跳跃高度和空中位移距离提升10%。",
+      "effects": [
+        {
+          "type": "air_mobility_up",
+          "params": {
+            "value": 0.1
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 21
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_022",
+      "name": {
+        "zh": "风感",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["defense", "projectile_resist"],
+      "desc": "受到投射物伤害时，最终伤害降低10%。",
+      "effects": [
+        {
+          "type": "special_damage_taken_down",
+          "params": {
+            "damage_type": "projectile",
+            "value": 0.1
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 22
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_023",
+      "name": {
+        "zh": "岩骨",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["knockback_resist", "stability"],
+      "desc": "受到的击退距离降低20%。",
+      "effects": [
+        {
+          "type": "knockback_resist",
+          "params": {
+            "value": 0.2
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 23
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_024",
+      "name": {
+        "zh": "守卫獒性",
+        "en": ""
+      },
+      "category": "normal",
+      "tags": ["guard", "damage_down", "protector"],
+      "desc": "替主人承伤时，受到伤害降低15%。",
+      "effects": [
+        {
+          "type": "guard_damage_taken_down",
+          "params": {
+            "value": 0.15
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 24
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_101",
+      "name": {
+        "zh": "再生苔绒",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["regen", "out_of_combat", "survival"],
+      "desc": "脱离战斗后，每秒回复2%最大生命，持续5秒。",
+      "effects": [
+        {
+          "type": "out_of_combat_regen_hp",
+          "params": {
+            "value": 0.02,
+            "duration": 5.0
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 101
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_102",
+      "name": {
+        "zh": "古木甲胄",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["survive", "damage_down", "one_time"],
+      "desc": "首次受到致命伤害时保留1点生命，并获得2秒30%减伤。",
+      "effects": [
+        {
+          "type": "survive_lethal_once",
+          "params": {
+            "remain_hp": 1,
+            "buff": {
+              "damage_down": 0.3,
+              "duration": 2.0
+            }
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 102
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_103",
+      "name": {
+        "zh": "青藤猎袭",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["dash", "state_apply", "bind"],
+      "desc": "使用位移技能后3秒内，下一次命中附加1.5秒束缚。",
+      "effects": [
+        {
+          "type": "after_dash_next_hit_apply_state",
+          "params": {
+            "state": "bind",
+            "duration": 1.5,
+            "window": 3.0
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 103
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_104",
+      "name": {
+        "zh": "灵烬余辉",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["mp_cost_down", "conditional", "fire"],
+      "desc": "MP低于20%时，火属性技能消耗降低30%。",
+      "effects": [
+        {
+          "type": "conditional_mp_cost_down",
+          "params": {
+            "condition": {
+              "mp_percent_lte": 0.2
+            },
+            "element": "fire",
+            "value": 0.3
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 104
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_105",
+      "name": {
+        "zh": "青烛护魂",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["cleanse", "control_resist", "trigger"],
+      "desc": "受到控制状态时，有25%概率立即净化一次。",
+      "effects": [
+        {
+          "type": "on_control_apply_cleanse_chance",
+          "params": {
+            "chance": 0.25
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 105
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_106",
+      "name": {
+        "zh": "赤炬显圣",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["ultimate", "fire", "damage_up"],
+      "desc": "释放必杀后10秒内，火属性伤害提高20%。",
+      "effects": [
+        {
+          "type": "after_ultimate_element_damage_up",
+          "params": {
+            "element": "fire",
+            "value": 0.2,
+            "duration": 10.0
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 106
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_107",
+      "name": {
+        "zh": "初刃觉醒",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["on_kill", "attack_speed", "tempo"],
+      "desc": "首次击败敌人后，攻击速度提升15%，持续8秒。",
+      "effects": [
+        {
+          "type": "on_kill_attack_speed_up",
+          "params": {
+            "value": 0.15,
+            "duration": 8.0
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 107
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_108",
+      "name": {
+        "zh": "森影追袭",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["back_hit", "mp_refund", "resource"],
+      "desc": "从背后命中时，返还该技能20%MP消耗。",
+      "effects": [
+        {
+          "type": "back_hit_refund_mp_cost",
+          "params": {
+            "value": 0.2
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 108
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_109",
+      "name": {
+        "zh": "王镰领域",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["single_target", "nearby_check", "damage_up"],
+      "desc": "周围8米内仅有1名敌人时，对其伤害提高20%。",
+      "effects": [
+        {
+          "type": "single_target_nearby_damage_up",
+          "params": {
+            "radius": 8.0,
+            "enemy_count": 1,
+            "value": 0.2
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 109
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_110",
+      "name": {
+        "zh": "顺风翎",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["airborne", "cooldown_down", "skill"],
+      "desc": "空中释放技能时，冷却缩短10%。",
+      "effects": [
+        {
+          "type": "airborne_skill_cooldown_down",
+          "params": {
+            "value": 0.1
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 110
+      },
+      "enabled": true
+    },
+    {
+      "id": "ability_111",
+      "name": {
+        "zh": "不屈岩心",
+        "en": ""
+      },
+      "category": "hidden",
+      "tags": ["conditional", "tenacity", "control_resist", "low_hp"],
+      "desc": "生命低于30%时，韧性提升25%，受控时间缩短20%。",
+      "effects": [
+        {
+          "type": "conditional_tenacity_up",
+          "params": {
+            "condition": {
+              "hp_percent_lte": 0.3
+            },
+            "tenacity": 0.25,
+            "control_duration_down": 0.2
+          }
+        }
+      ],
+      "ui": {
+        "icon": "",
+        "priority": 111
+      },
+      "enabled": true
+    }
+  ]
+}

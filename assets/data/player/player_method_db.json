@@ -1,226 +1,88 @@
 {
   "player_methods": [
-	{
-	  "id": "mtd_na_ling",
-	  "name_zh": "纳灵诀",
-	  "name_en": "Spirit Intake Art",
-	  "category": "cultivation_method",
-	  "system_type": "spiritual",
-	  "rarity": "common",
-	  "learnable": true,
-	  "learned_by_default": true,
-	  "desc": "基础法修功法，可吸纳周围灵气修炼并用于护体与恢复。",
-	  "method_bonus": {
-		"type": "passive_stat_bonus",
-		"params": {
-		  "mag": 4,
-		  "res": 3,
-		  "mp_max": 20,
-		  "mp_regen": 0.08
-		}
-	  },
-	  "sub_skills": [
-		{
-		  "id": "ms_breath",
-		  "name_zh": "归元吐纳",
-		  "name_en": "Returning Breath",
-		  "category": "cultivation_skill",
-		  "system_type": "spiritual",
-		  "learned_by_default": true,
-		  "combat_usable": false,
-		  "field_usable": true,
-		  "cost": {
-			"resource": "",
-			"value": 0
-		  },
-		  "cooldown": 0.0,
-		  "cast_time": 1.0,
-		  "target_type": "self",
-		  "range_type": "self",
-		  "power": 0,
-		  "desc": "修炼用吐纳术，可缓慢吸收周围灵气提升法修经验，也可快速恢复灵气和耐力。",
-		  "effect": {
-			"type": "cultivate_and_recover",
-			"params": {
-			  "gain_spiritual_exp": 2,
-			  "recover_mp_ratio": 0.2,
-			  "recover_stamina_ratio": 0.15
-			}
-		  }
-		},
-		{
-		  "id": "ms_guard",
-		  "name_zh": "灵元护体",
-		  "name_en": "Spirit Guard",
-		  "category": "active_skill",
-		  "system_type": "spiritual",
-		  "learned_by_default": true,
-		  "combat_usable": true,
-		  "field_usable": false,
-		  "cost": {
-			"resource": "mp",
-			"value": 14
-		  },
-		  "cooldown": 8.0,
-		  "cast_time": 0.25,
-		  "target_type": "self",
-		  "range_type": "self",
-		  "power": 0,
-		  "desc": "在体表形成灵气护盾，抵挡部分伤害。",
-		  "effect": {
-			"type": "self_barrier",
-			"params": {
-			  "barrier_ratio": 0.18,
-			  "duration": 5.0
-			}
-		  }
-		}
-	  ]
-	},
-	{
-	  "id": "mtd_tie_mai",
-	  "name_zh": "铁脉锻身法",
-	  "name_en": "Iron Vein Body Art",
-	  "category": "cultivation_method",
-	  "system_type": "body",
-	  "rarity": "common",
-	  "learnable": true,
-	  "learned_by_default": true,
-	  "desc": "以灵气锤炼身体与经脉的体修法门，提升力量、体质与耐力。",
-	  "method_bonus": {
-		"type": "passive_stat_bonus",
-		"params": {
-		  "atk": 5,
-		  "def": 4,
-		  "stamina_max": 25,
-		  "hp_max": 20,
-		  "stamina_regen": 0.1
-		}
-	  },
-	  "sub_skills": [
-		{
-		  "id": "ms_temper",
-		  "name_zh": "淬体诀",
-		  "name_en": "Body Tempering",
-		  "category": "cultivation_skill",
-		  "system_type": "body",
-		  "learned_by_default": true,
-		  "combat_usable": false,
-		  "field_usable": true,
-		  "cost": {
-			"resource": "",
-			"value": 0
-		  },
-		  "cooldown": 0.0,
-		  "cast_time": 1.2,
-		  "target_type": "self",
-		  "range_type": "self",
-		  "power": 0,
-		  "desc": "利用灵气反复锤炼筋骨血肉，可缓慢提升体质和力量，并增加一定体修经验。",
-		  "effect": {
-			"type": "body_cultivation",
-			"params": {
-			  "gain_body_exp": 2,
-			  "temp_hp_bonus": 0.02,
-			  "temp_atk_bonus": 0.02,
-			  "duration": 300.0
-			}
-		  }
-		}
-	  ]
-	},
-	{
-	  "id": "mtd_jy_yushou",
-	  "name_zh": "骄阳御兽决",
-	  "name_en": "Blazing Beast Art",
-	  "category": "beast_method",
-	  "system_type": "special",
-	  "rarity": "rare",
-	  "learnable": true,
-	  "learned_by_default": true,
-	  "desc": "以炽阳灵气驾驭灵兽的御兽法门，可进行技能契约并建立灵兽反馈体系。",
-	  "method_bonus": {
-		"type": "passive_special_bonus",
-		"params": {
-		  "capture_rate_bonus": 0.05,
-		  "pet_feedback_rate": 1.0
-		}
-	  },
-	  "sub_skills": [
-		{
-		  "id": "ms_ling_qi",
-		  "name_zh": "灵契",
-		  "name_en": "Spirit Contract",
-		  "category": "capture_skill",
-		  "system_type": "special",
-		  "learned_by_default": true,
-		  "combat_usable": true,
-		  "field_usable": false,
-		  "cost": {
-			"resource": "mp",
-			"value": 20
-		  },
-		  "cooldown": 10.0,
-		  "cast_time": 0.35,
-		  "target_type": "enemy",
-		  "range_type": "projectile",
-		  "power": 8,
-		  "desc": "释放灵气锁链束缚灵兽，并有一定几率直接收服。成功收服后占用御兽契约位。",
-		  "effect": {
-			"type": "capture_by_skill",
-			"params": {
-			  "projectile_speed": 9.0,
-			  "apply_state": "bind",
-			  "bind_duration": 2.0,
-			  "capture_mode": "contract_slot",
-			  "capture_rate_bonus": 0.12,
-			  "use_contract_slot": true
-			}
-		  }
-		},
-		{
-		  "id": "ms_blood_qi",
-		  "name_zh": "血契",
-		  "name_en": "Blood Contract",
-		  "category": "capture_skill",
-		  "system_type": "special",
-		  "learned_by_default": true,
-		  "combat_usable": true,
-		  "field_usable": false,
-		  "cost": {
-			"resource": "hp",
-			"value": 18
-		  },
-		  "cooldown": 14.0,
-		  "cast_time": 0.45,
-		  "target_type": "enemy",
-		  "range_type": "projectile",
-		  "power": 10,
-		  "desc": "消耗自身生命强行建立血契，收服成功率更高。成功收服后占用御兽契约位。",
-		  "effect": {
-			"type": "capture_by_blood_contract",
-			"params": {
-			  "projectile_speed": 8.5,
-			  "apply_state": "bind",
-			  "bind_duration": 2.5,
-			  "capture_mode": "contract_slot",
-			  "capture_rate_bonus": 0.25,
-			  "use_contract_slot": true
-			}
-		  }
-		}
-	  ],
-	  "contract_rules": {
-		"slot_unlock_rule": "every_10_major_realms_add_1",
-		"slot_base": 1,
-		"equipped_pet_feedback": {
-		  "enabled": true,
-		  "desc": "装备在契约位的灵兽会根据自身状态反馈部分属性给玩家。"
-		},
-		"item_capture_rule": {
-		  "desc": "用道具收服的灵兽不占契约位，不能装备，只能收入御兽空间培养。"
-		}
-	  }
-	}
+    {
+      "id": "mtd_na_ling",
+      "name_zh": "纳灵诀",
+      "name_en": "Spirit Intake Art",
+      "category": "cultivation_method",
+      "method_type": "spiritual",
+      "rarity": "common",
+      "learnable": true,
+      "learned_by_default": true,
+      "desc": "联邦开发的基础法修功法，可吸纳天地灵气运转周天，提升灵气储量与术法稳定性。",
+      "method_bonus": {
+        "type": "passive_stat_bonus",
+        "params": {
+          "mag": 4,
+          "res": 3,
+          "mp_max": 20,
+          "spirit_power": 3,
+          "mp_regen": 0.08
+        }
+      },
+      "linked_skill_ids": [
+        "spl_breath",
+        "spl_guard"
+      ]
+    },
+    {
+      "id": "mtd_tie_mai",
+      "name_zh": "铁脉锻身法",
+      "name_en": "Iron Vein Body Art",
+      "category": "cultivation_method",
+      "method_type": "body",
+      "rarity": "common",
+      "learnable": true,
+      "learned_by_default": true,
+      "desc": "以灵气锤炼筋骨血肉与经脉的体修功法，提升力量、体魄与耐力。",
+      "method_bonus": {
+        "type": "passive_stat_bonus",
+        "params": {
+          "atk": 5,
+          "def": 4,
+          "hp_max": 20,
+          "stamina_max": 25,
+          "agi": 1,
+          "stamina_regen": 0.1
+        }
+      },
+      "linked_skill_ids": [
+        "mrt_temper"
+      ]
+    },
+    {
+      "id": "mtd_jy_yushou",
+      "name_zh": "骄阳御兽决",
+      "name_en": "Blazing Beast Art",
+      "category": "beast_method",
+      "method_type": "beast",
+      "rarity": "rare",
+      "learnable": true,
+      "learned_by_default": true,
+      "desc": "以炽阳灵气驾驭灵兽的御兽功法，可建立契约位并提升灵兽反馈效率。",
+      "method_bonus": {
+        "type": "passive_special_bonus",
+        "params": {
+          "capture_rate_bonus": 0.05,
+          "pet_feedback_rate": 1.0,
+          "spirit_power": 2
+        }
+      },
+      "linked_skill_ids": [
+        "spl_ling_contract",
+        "spl_blood_contract"
+      ],
+      "contract_rules": {
+        "slot_unlock_rule": "every_10_major_realms_add_1",
+        "slot_base": 1,
+        "equipped_pet_feedback": {
+          "enabled": true,
+          "desc": "装备在契约位的灵兽会根据自身状态反馈部分属性给玩家。"
+        },
+        "item_capture_rule": {
+          "desc": "用道具收服的灵兽不占契约位，不能装备，只能收入御兽空间培养。"
+        }
+      }
+    }
   ]
 }

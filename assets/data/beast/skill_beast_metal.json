@@ -2,6 +2,258 @@
   "element": "metal",
   "skills": [
 	{
+      "id": "skill_001",
+      "name": "裂金爪",
+      "element": "metal",
+      "skill_type": "active",
+      "skill_category": "physical",
+      "target_type": "single_enemy",
+      "power": 35,
+      "accuracy": 0.95,
+      "cost": {
+        "mp": 0,
+        "stamina": 8
+      },
+      "cooldown": 0,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["damage"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "level",
+        "value": 1
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "metal_claw"
+      },
+      "desc": "以金属性利爪撕裂目标。"
+    },
+    {
+      "id": "skill_002",
+      "name": "护身灵吼",
+      "element": "metal",
+      "skill_type": "active",
+      "skill_category": "support",
+      "target_type": "self",
+      "power": 0,
+      "accuracy": 1.0,
+      "cost": {
+        "mp": 6,
+        "stamina": 0
+      },
+      "cooldown": 3,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["self_buff", "def_up"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "level",
+        "value": 3
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "guard_howl"
+      },
+      "desc": "发出护身灵吼，短时间提高自身防御。"
+    },
+    {
+      "id": "skill_003",
+      "name": "追击扑袭",
+      "element": "metal",
+      "skill_type": "active",
+      "skill_category": "physical",
+      "target_type": "single_enemy",
+      "power": 48,
+      "accuracy": 0.92,
+      "cost": {
+        "mp": 0,
+        "stamina": 12
+      },
+      "cooldown": 1,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["damage", "dash"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "level",
+        "value": 7
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "chase_pounce"
+      },
+      "desc": "快速扑向目标进行追击。"
+    },
+    {
+      "id": "skill_004",
+      "name": "金纹震击",
+      "element": "metal",
+      "skill_type": "active",
+      "skill_category": "physical",
+      "target_type": "single_enemy",
+      "power": 62,
+      "accuracy": 0.9,
+      "cost": {
+        "mp": 4,
+        "stamina": 14
+      },
+      "cooldown": 2,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["damage", "break"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "level",
+        "value": 12
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "metal_shock"
+      },
+      "desc": "以金纹之力震击目标，偏向破防。"
+    },
+    {
+      "id": "skill_005",
+      "name": "灵金突牙",
+      "element": "metal",
+      "skill_type": "active",
+      "skill_category": "physical",
+      "target_type": "single_enemy",
+      "power": 58,
+      "accuracy": 0.95,
+      "cost": {
+        "mp": 0,
+        "stamina": 10
+      },
+      "cooldown": 0,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["damage", "pierce"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "stage",
+        "value": 2
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "gold_fang"
+      },
+      "desc": "凝聚灵金之力贯穿目标防御。"
+    },
+    {
+      "id": "skill_006",
+      "name": "金甲护势",
+      "element": "metal",
+      "skill_type": "active",
+      "skill_category": "support",
+      "target_type": "self",
+      "power": 0,
+      "accuracy": 1.0,
+      "cost": {
+        "mp": 8,
+        "stamina": 0
+      },
+      "cooldown": 4,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["self_buff", "def_up", "res_up"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "stage",
+        "value": 2
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "gold_guard"
+      },
+      "desc": "以金属性灵力形成护体之势。"
+    },
+    {
+      "id": "skill_007",
+      "name": "灵压冲锋",
+      "element": "metal",
+      "skill_type": "active",
+      "skill_category": "physical",
+      "target_type": "single_enemy",
+      "power": 72,
+      "accuracy": 0.9,
+      "cost": {
+        "mp": 4,
+        "stamina": 16
+      },
+      "cooldown": 2,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["damage", "dash", "knockback"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "level",
+        "value": 14
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "pressure_charge"
+      },
+      "desc": "借助灵压高速冲锋，击退目标。"
+    },
+    {
+      "id": "skill_008",
+      "name": "玄金裂波",
+      "element": "metal",
+      "skill_type": "active",
+      "skill_category": "special",
+      "target_type": "single_enemy",
+      "power": 88,
+      "accuracy": 0.88,
+      "cost": {
+        "mp": 14,
+        "stamina": 0
+      },
+      "cooldown": 4,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["damage", "special_burst"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "level",
+        "value": 22
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "gold_wave"
+      },
+      "desc": "释放玄金裂波对敌造成强力打击。"
+    },
+    {
+      "id": "skill_009",
+      "name": "赤金噬咬",
+      "element": "metal",
+      "skill_type": "active",
+      "skill_category": "physical",
+      "target_type": "single_enemy",
+      "power": 76,
+      "accuracy": 0.95,
+      "cost": {
+        "mp": 0,
+        "stamina": 14
+      },
+      "cooldown": 1,
+      "priority": 0,
+      "hit_count": 1,
+      "effect_tags": ["damage", "bite"],
+      "apply_states": [],
+      "learn_rule": {
+        "method": "stage",
+        "value": 3
+      },
+      "resources": {
+        "icon": "",
+        "animation_key": "red_gold_bite"
+      },
+      "desc": "以赤金犬的獠牙撕咬目标。"
+    },
+	{
 	  "id": "skill_201",
 	  "name": "护身扑咬",
 	  "element": "metal",

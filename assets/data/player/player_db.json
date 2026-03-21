@@ -1,0 +1,152 @@
+{
+  "version": "1.0.0",
+  "player_state": {
+    "player_id": "player_001",
+    "player_name": "主角",
+
+    "cultivation": {
+      "spiritual": {
+        "system_id": "spiritual",
+        "realm_id": "qi_refining",
+        "realm_name": {
+          "zh": "练气",
+          "en": "Qi Refining"
+        },
+        "stage": 5,
+        "stage_max": 10,
+        "perfect_stage": 10,
+        "exp": 0,
+        "exp_to_next": 500,
+        "breakthrough_required": false
+      },
+      "body": {
+        "system_id": "body",
+        "realm_id": "body_tempering",
+        "realm_name": {
+          "zh": "炼体",
+          "en": "Body Tempering"
+        },
+        "stage": 7,
+        "stage_max": 10,
+        "perfect_stage": 10,
+        "exp": 0,
+        "exp_to_next": 700,
+        "breakthrough_required": false
+      }
+    },
+
+    "base_stats": {
+      "hp_max": 120,
+      "mp_max": 95,
+      "stamina_max": 130,
+      "atk": 18,
+      "def": 16,
+      "mag": 20,
+      "res": 18,
+      "agi": 12,
+      "spi": 16
+    },
+
+    "current_stats": {
+      "hp": 120,
+      "mp": 95,
+      "stamina": 130
+    },
+
+    "derived_rules": {
+      "spell_cost_resource": "mp",
+      "physical_cost_resource": "stamina",
+      "spiritual_growth_focus": ["mag", "res", "mp_max", "spi"],
+      "body_growth_focus": ["atk", "def", "stamina_max", "agi"]
+    },
+
+    "player_skill_state": {
+      "learned_methods": [
+        "mtd_na_ling",
+        "mtd_tie_mai",
+        "mtd_jy_yushou"
+      ],
+      "learned_martial_skills": [
+        "mrt_temper",
+        "mrt_beng",
+        "mrt_sweep",
+        "mrt_step"
+      ],
+      "learned_spells": [
+        "spl_breath",
+        "spl_guard",
+        "spl_ling_contract",
+        "spl_blood_contract",
+        "spl_fireball",
+        "spl_water",
+        "spl_earth",
+        "spl_wood_bind",
+        "spl_metal"
+      ],
+      "equipped_active": [
+        "mrt_beng",
+        "mrt_step",
+        "spl_fireball",
+        "spl_guard",
+        "spl_ling_contract"
+      ],
+      "equipped_passive_methods": [
+        "mtd_na_ling",
+        "mtd_tie_mai",
+        "mtd_jy_yushou"
+      ]
+    },
+
+    "contract_slots": {
+      "unlock_rule": "every_10_major_realms_add_1",
+      "base_slots": 1,
+      "extra_slots_from_realm": 0,
+      "total_slots": 1,
+      "equipped_pet_instance_ids": []
+    },
+
+    "battle_state": {
+      "is_alive": true,
+      "is_combat": false,
+      "is_invincible": false,
+      "is_casting": false,
+      "is_moving": false,
+      "is_dashing": false,
+      "is_jumping": false,
+      "is_on_ground": true,
+      "is_locked_input": false
+    },
+
+    "map_state": {
+      "current_map_id": "map_start_001",
+      "spawn_point_id": "spawn_001",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "facing": 1
+    },
+
+    "state_runtime": [],
+
+    "pet_system": {
+      "active_pet_instance_id": "",
+      "pet_box_instance_ids": [],
+      "pet_slot_max": 3,
+      "team_slot_max": 3
+    },
+
+    "capture_state": {
+      "is_capturing": false,
+      "target_enemy_id": "",
+      "use_item_id": ""
+    },
+
+    "meta": {
+      "money": 0,
+      "free_stat_points": 0,
+      "last_save_time": "",
+      "play_time_sec": 0
+    }
+  }
+}
